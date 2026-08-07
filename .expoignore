@@ -1,0 +1,10 @@
+android/.gradle/
+android/build/
+android/app/build/
+android/.cxx/
+android/app/.cxx/
+dist/
+build/
+.cache/
+mock-backend/node_modules/
+backend/node_modules/

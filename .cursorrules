@@ -1,0 +1,11 @@
+# MAXSAS REALTY AI
+# Always adhere to the established UI/UX and Cross-Platform guidelines.
+
+# Read the comprehensive architectural instructions here before answering ANY prompt:
+# -> See AI_INSTRUCTIONS.md
+
+- Use Expo Router ONLY (no React Navigation standalone routing).
+- Use `useResponsive` hook for UI modifications. Web screens MUST be constrained by `maxWidth: 1024` and `alignSelf: 'center'` when building internal dashboards like Lexus, Diamond, Enterprise, etc. Mobile must remain 100% width.
+- Always use the centralized color theme (Dark Mode, Deep Blue Glassmorphism).
+- Ensure `.web.tsx` and `.native.tsx` files are used if heavy separation is needed (e.g., Marketing DOM vs. Native Splash Screen), and ALWAYS include a fallback `index.tsx`.
+- Gated content (Audio, Transcripts) must display an Upgrade UI overlay, do not fully hide the component.

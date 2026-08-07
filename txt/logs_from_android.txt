@@ -1,0 +1,1055 @@
+Executing tasks: [:app:bundleRelease] in project C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\android
+
+> Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:shared:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:shared:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileJava NO-SOURCE
+> Task :gradle-plugin:shared:processResources NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:processResources NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:classes UP-TO-DATE
+> Task :gradle-plugin:shared:classes UP-TO-DATE
+> Task :gradle-plugin:shared:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin-shared:jar UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:settings-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:settings-plugin:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:classes UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-settings-plugin:jar UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-module-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-module-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-module-gradle-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileKotlin UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:processResources UP-TO-DATE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
+> Task :expo-gradle-plugin:expo-autolinking-plugin:jar UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:react-native-gradle-plugin:jar UP-TO-DATE
+> Task :expo-module-gradle-plugin:compileKotlin UP-TO-DATE
+> Task :expo-module-gradle-plugin:compileJava NO-SOURCE
+> Task :expo-module-gradle-plugin:classes UP-TO-DATE
+> Task :expo-module-gradle-plugin:jar UP-TO-DATE
+
+> Configure project :app
+AGPBI: {"kind":"warning","text":"The option setting 'android.overridePathCheck=true' is experimental.\nThe current default is 'false'.","sources":[{}]}
+
+> Configure project :
+[ExpoRootProject] Using the following versions:
+  - buildTools:  35.0.0
+  - minSdk:      24
+  - compileSdk:  35
+  - targetSdk:   35
+  - ndk:         26.3.11579264
+  - kotlin:      2.1.20
+  - ksp:         2.1.20-2.0.1
+
+> Configure project :expo
+
+Using expo modules
+  - expo-constants (18.0.13)
+  - expo-modules-core (3.0.30)
+  - [📦] expo-asset (12.0.13)
+  - [📦] expo-document-picker (14.0.8)
+  - [📦] expo-file-system (19.0.22)
+  - [📦] expo-font (14.0.11)
+  - [📦] expo-haptics (15.0.8)
+  - [📦] expo-image (3.0.11)
+  - [📦] expo-keep-awake (15.0.8)
+  - [📦] expo-linear-gradient (15.0.8)
+  - [📦] expo-linking (8.0.12)
+  - [📦] expo-splash-screen (31.0.13)
+  - [📦] expo-system-ui (6.0.9)
+  - [📦] expo-web-browser (15.0.11)
+
+
+> Task :expo-modules-core:preBuild UP-TO-DATE
+> Task :expo-modules-core:preReleaseBuild UP-TO-DATE
+> Task :expo-modules-core:generateReleaseResValues
+> Task :expo-modules-core:generateReleaseResources
+> Task :expo-modules-core:packageReleaseResources
+> Task :expo-modules-core:extractDeepLinksRelease
+
+> Task :expo-modules-core:processReleaseManifest
+C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\node_modules\expo-modules-core\android\src\main\AndroidManifest.xml:8:9-11:45 Warning:
+	meta-data#com.facebook.soloader.enabled@android:value was tagged at AndroidManifest.xml:8 to replace other declarations but no other declaration present
+
+> Task :react-native-worklets:assertMinimalReactNativeVersionTask
+> Task :react-native-worklets:assertNewArchitectureEnabledTask SKIPPED
+> Task :expo-modules-core:writeReleaseAarMetadata
+> Task :expo-modules-core:compileReleaseLibraryResources
+> Task :react-native-reanimated:assertMinimalReactNativeVersionTask
+> Task :react-native-reanimated:assertNewArchitectureEnabledTask SKIPPED
+> Task :expo-modules-core:parseReleaseLocalResources
+> Task :expo-modules-core:generateReleaseRFile
+> Task :expo-modules-core:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-modules-core:generateReleaseBuildConfig
+> Task :react-native-gesture-handler:generateCodegenSchemaFromJavaScript
+> Task :react-native-screens:generateCodegenSchemaFromJavaScript
+> Task :react-native-safe-area-context:generateCodegenSchemaFromJavaScript
+> Task :react-native-async-storage_async-storage:generateCodegenSchemaFromJavaScript
+
+> Task :expo-constants:createExpoConfig
+The NODE_ENV environment variable is required but was not specified. Ensure the project is bundled with Expo CLI or NODE_ENV is set. Using only .env.local and .env
+env: load .env
+env: export EXPO_PUBLIC_API_BASE_URL EXPO_PUBLIC_TENANT_ID
+
+> Task :expo-constants:preBuild
+> Task :expo-constants:preReleaseBuild
+> Task :expo-constants:generateReleaseResValues
+> Task :react-native-webview:generateCodegenSchemaFromJavaScript
+> Task :expo-constants:generateReleaseResources
+> Task :expo-constants:packageReleaseResources
+> Task :expo-constants:extractDeepLinksRelease
+> Task :expo-constants:processReleaseManifest
+> Task :expo-constants:writeReleaseAarMetadata
+> Task :react-native-svg:generateCodegenSchemaFromJavaScript
+> Task :react-native-reanimated:assertWorkletsVersionTask
+> Task :expo-constants:compileReleaseLibraryResources
+> Task :expo-constants:parseReleaseLocalResources
+> Task :expo-constants:generateReleaseRFile
+> Task :expo-constants:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo-constants:generateReleaseBuildConfig
+> Task :expo-constants:javaPreCompileRelease
+> Task :react-native-worklets:generateCodegenSchemaFromJavaScript
+> Task :expo-constants:mergeReleaseShaders
+> Task :expo-constants:compileReleaseShaders NO-SOURCE
+> Task :expo-constants:generateReleaseAssets UP-TO-DATE
+> Task :expo-constants:mergeReleaseAssets
+> Task :expo-constants:mergeReleaseJniLibFolders
+> Task :expo-constants:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo-constants:copyReleaseJniLibsProjectOnly
+> Task :expo-constants:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo-modules-core:javaPreCompileRelease
+> Task :expo-modules-core:mergeReleaseShaders
+> Task :expo-modules-core:compileReleaseShaders NO-SOURCE
+> Task :expo-modules-core:generateReleaseAssets UP-TO-DATE
+> Task :expo-modules-core:mergeReleaseAssets
+> Task :react-native-async-storage_async-storage:generateCodegenArtifactsFromSchema
+> Task :react-native-async-storage_async-storage:preBuild
+> Task :react-native-async-storage_async-storage:preReleaseBuild
+> Task :react-native-safe-area-context:generateCodegenArtifactsFromSchema
+> Task :react-native-safe-area-context:preBuild
+> Task :react-native-safe-area-context:preReleaseBuild
+> Task :react-native-async-storage_async-storage:generateReleaseResValues
+> Task :react-native-safe-area-context:generateReleaseResValues
+> Task :react-native-safe-area-context:generateReleaseResources
+> Task :react-native-gesture-handler:generateCodegenArtifactsFromSchema
+> Task :react-native-gesture-handler:preBuild
+> Task :react-native-gesture-handler:preReleaseBuild
+> Task :react-native-gesture-handler:generateReleaseResValues
+> Task :react-native-safe-area-context:packageReleaseResources
+> Task :react-native-async-storage_async-storage:generateReleaseResources
+> Task :react-native-safe-area-context:extractDeepLinksRelease
+
+> Task :react-native-safe-area-context:processReleaseManifest
+package="com.th3rdwave.safeareacontext" found in source AndroidManifest.xml: C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.th3rdwave.safeareacontext" from the source AndroidManifest.xml: C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\node_modules\react-native-safe-area-context\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-gesture-handler:generateReleaseResources
+> Task :react-native-safe-area-context:writeReleaseAarMetadata
+> Task :react-native-webview:generateCodegenArtifactsFromSchema
+> Task :react-native-webview:preBuild
+> Task :react-native-webview:preReleaseBuild
+> Task :react-native-async-storage_async-storage:packageReleaseResources
+> Task :react-native-webview:generateReleaseResValues
+> Task :react-native-safe-area-context:compileReleaseLibraryResources
+> Task :react-native-async-storage_async-storage:extractDeepLinksRelease
+> Task :react-native-webview:generateReleaseResources
+> Task :react-native-safe-area-context:parseReleaseLocalResources
+> Task :react-native-safe-area-context:generateReleaseRFile
+> Task :react-native-screens:generateCodegenArtifactsFromSchema
+> Task :react-native-screens:preBuild
+> Task :react-native-screens:preReleaseBuild
+> Task :react-native-async-storage_async-storage:writeReleaseAarMetadata
+> Task :react-native-screens:generateReleaseResValues
+> Task :react-native-webview:packageReleaseResources
+> Task :react-native-webview:extractDeepLinksRelease
+> Task :react-native-async-storage_async-storage:compileReleaseLibraryResources
+> Task :react-native-reanimated:generateCodegenSchemaFromJavaScript
+> Task :react-native-svg:generateCodegenArtifactsFromSchema
+> Task :react-native-svg:preBuild
+> Task :react-native-svg:preReleaseBuild
+> Task :react-native-screens:generateReleaseResources
+
+> Task :react-native-async-storage_async-storage:processReleaseManifest
+package="com.reactnativecommunity.asyncstorage" found in source AndroidManifest.xml: C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\node_modules\@react-native-async-storage\async-storage\android\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.reactnativecommunity.asyncstorage" from the source AndroidManifest.xml: C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\node_modules\@react-native-async-storage\async-storage\android\src\main\AndroidManifest.xml.
+
+> Task :react-native-async-storage_async-storage:parseReleaseLocalResources
+> Task :react-native-safe-area-context:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-svg:generateReleaseResValues
+> Task :react-native-webview:writeReleaseAarMetadata
+> Task :react-native-svg:generateReleaseResources
+> Task :react-native-async-storage_async-storage:generateReleaseRFile
+> Task :react-native-webview:processReleaseManifest
+> Task :react-native-webview:compileReleaseLibraryResources
+> Task :react-native-webview:parseReleaseLocalResources
+> Task :react-native-svg:packageReleaseResources
+> Task :react-native-safe-area-context:generateReleaseBuildConfig
+> Task :react-native-svg:extractDeepLinksRelease
+> Task :react-native-async-storage_async-storage:generateReleaseBuildConfig
+> Task :react-native-svg:processReleaseManifest
+> Task :react-native-svg:writeReleaseAarMetadata
+> Task :react-native-async-storage_async-storage:javaPreCompileRelease
+> Task :react-native-worklets:generateCodegenArtifactsFromSchema
+> Task :react-native-svg:compileReleaseLibraryResources
+> Task :react-native-svg:parseReleaseLocalResources
+> Task :react-native-worklets:prepareWorkletsHeadersForPrefabs
+> Task :react-native-worklets:preBuild
+> Task :react-native-worklets:preReleaseBuild
+> Task :react-native-worklets:generateReleaseResValues
+> Task :react-native-screens:packageReleaseResources
+> Task :react-native-screens:extractDeepLinksRelease
+> Task :react-native-worklets:generateReleaseResources
+> Task :react-native-worklets:packageReleaseResources
+> Task :react-native-svg:generateReleaseRFile
+> Task :react-native-worklets:extractDeepLinksRelease
+> Task :react-native-screens:writeReleaseAarMetadata
+> Task :react-native-screens:processReleaseManifest
+> Task :react-native-worklets:processReleaseManifest
+> Task :react-native-svg:generateReleaseBuildConfig
+> Task :react-native-worklets:writeReleaseAarMetadata
+> Task :react-native-worklets:compileReleaseLibraryResources
+> Task :react-native-svg:javaPreCompileRelease
+> Task :react-native-worklets:parseReleaseLocalResources
+> Task :react-native-screens:parseReleaseLocalResources
+> Task :react-native-screens:generateReleaseRFile
+> Task :react-native-worklets:generateReleaseRFile
+> Task :react-native-worklets:generateReleaseBuildConfig
+> Task :react-native-worklets:javaPreCompileRelease
+> Task :react-native-screens:compileReleaseLibraryResources
+> Task :react-native-safe-area-context:javaPreCompileRelease
+> Task :react-native-screens:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-screens:generateReleaseBuildConfig
+
+> Task :react-native-async-storage_async-storage:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\node_modules\@react-native-async-storage\async-storage\android\src\javaPackage\java\com\reactnativecommunity\asyncstorage\AsyncStoragePackage.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :react-native-worklets:compileReleaseJavaWithJavac
+Note: C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\node_modules\react-native-worklets\android\src\main\java\com\swmansion\worklets\WorkletsPackage.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :react-native-worklets:bundleLibCompileToJarRelease
+> Task :react-native-async-storage_async-storage:bundleLibRuntimeToDirRelease
+> Task :react-native-worklets:bundleLibRuntimeToDirRelease
+
+> Task :app:createBundleReleaseJsAndAssets
+env: load .env
+env: export EXPO_PUBLIC_API_BASE_URL EXPO_PUBLIC_TENANT_ID
+
+> Task :react-native-screens:javaPreCompileRelease
+> Task :react-native-async-storage_async-storage:bundleLibCompileToJarRelease
+> Task :react-native-async-storage_async-storage:mergeReleaseShaders
+> Task :react-native-async-storage_async-storage:compileReleaseShaders NO-SOURCE
+> Task :react-native-async-storage_async-storage:generateReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:generateCodegenArtifactsFromSchema
+> Task :react-native-async-storage_async-storage:mergeReleaseAssets
+> Task :react-native-safe-area-context:mergeReleaseShaders
+> Task :react-native-safe-area-context:compileReleaseShaders NO-SOURCE
+> Task :react-native-safe-area-context:generateReleaseAssets UP-TO-DATE
+> Task :react-native-safe-area-context:mergeReleaseAssets
+> Task :react-native-screens:mergeReleaseShaders
+> Task :react-native-screens:compileReleaseShaders NO-SOURCE
+> Task :react-native-screens:generateReleaseAssets UP-TO-DATE
+> Task :react-native-screens:mergeReleaseAssets
+> Task :react-native-worklets:mergeReleaseShaders
+> Task :react-native-worklets:compileReleaseShaders NO-SOURCE
+> Task :react-native-worklets:generateReleaseAssets UP-TO-DATE
+> Task :react-native-worklets:mergeReleaseAssets
+> Task :react-native-async-storage_async-storage:bundleLibRuntimeToJarRelease
+> Task :react-native-worklets:bundleLibRuntimeToJarRelease
+> Task :react-native-reanimated:prepareReanimatedHeadersForPrefabs
+> Task :react-native-reanimated:preBuild
+> Task :react-native-reanimated:preReleaseBuild
+> Task :react-native-reanimated:generateReleaseResValues
+> Task :react-native-reanimated:generateReleaseResources
+
+> Task :react-native-svg:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :react-native-reanimated:packageReleaseResources
+> Task :react-native-reanimated:extractDeepLinksRelease
+> Task :react-native-svg:bundleLibCompileToJarRelease
+> Task :expo:generatePackagesList
+> Task :expo:preBuild
+> Task :expo:preReleaseBuild
+> Task :expo:generateReleaseResValues
+
+> Task :app:createBundleReleaseJsAndAssets
+React Compiler enabled
+
+> Task :react-native-safe-area-context:compileReleaseKotlin
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaView.kt:59:23 'val uiImplementation: UIImplementation!' is deprecated. Deprecated in Java.
+
+> Task :react-native-svg:bundleLibRuntimeToDirRelease
+
+> Task :app:createBundleReleaseJsAndAssets
+Starting Metro Bundler
+
+> Task :expo-modules-core:compileReleaseKotlin
+> Task :expo-modules-core:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :react-native-gesture-handler:packageReleaseResources
+> Task :react-native-webview:generateReleaseRFile
+> Task :react-native-svg:mergeReleaseShaders
+> Task :react-native-svg:compileReleaseShaders NO-SOURCE
+> Task :react-native-svg:generateReleaseAssets UP-TO-DATE
+> Task :react-native-svg:mergeReleaseAssets
+> Task :react-native-svg:bundleLibRuntimeToJarRelease
+> Task :react-native-safe-area-context:compileReleaseJavaWithJavac
+> Task :react-native-screens:compileReleaseKotlin
+> Task :react-native-safe-area-context:bundleLibRuntimeToDirRelease
+> Task :react-native-safe-area-context:bundleLibCompileToJarRelease
+> Task :react-native-safe-area-context:bundleLibRuntimeToJarRelease
+> Task :react-native-async-storage_async-storage:processReleaseJavaRes NO-SOURCE
+> Task :react-native-safe-area-context:processReleaseJavaRes
+> Task :react-native-svg:processReleaseJavaRes NO-SOURCE
+> Task :react-native-worklets:processReleaseJavaRes NO-SOURCE
+> Task :react-native-async-storage_async-storage:mergeReleaseJniLibFolders
+> Task :react-native-async-storage_async-storage:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-async-storage_async-storage:copyReleaseJniLibsProjectOnly
+> Task :react-native-safe-area-context:mergeReleaseJniLibFolders
+> Task :react-native-safe-area-context:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-safe-area-context:copyReleaseJniLibsProjectOnly
+
+> Task :app:createBundleReleaseJsAndAssets
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+
+> Task :react-native-reanimated:processReleaseManifest
+> Task :react-native-svg:mergeReleaseJniLibFolders
+> Task :react-native-webview:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo:generateReleaseResources
+> Task :react-native-reanimated:writeReleaseAarMetadata
+> Task :react-native-reanimated:compileReleaseLibraryResources
+> Task :react-native-svg:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-async-storage_async-storage:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-reanimated:parseReleaseLocalResources
+> Task :react-native-safe-area-context:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-svg:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-svg:copyReleaseJniLibsProjectOnly
+> Task :react-native-webview:generateReleaseBuildConfig
+> Task :react-native-reanimated:generateReleaseBuildConfig
+> Task :expo:packageReleaseResources
+> Task :react-native-gesture-handler:extractDeepLinksRelease
+> Task :expo:extractDeepLinksRelease
+> Task :react-native-reanimated:javaPreCompileRelease
+> Task :react-native-reanimated:mergeReleaseShaders
+> Task :react-native-gesture-handler:writeReleaseAarMetadata
+> Task :react-native-reanimated:generateReleaseRFile
+> Task :expo:writeReleaseAarMetadata
+> Task :react-native-gesture-handler:compileReleaseLibraryResources
+> Task :react-native-gesture-handler:parseReleaseLocalResources
+> Task :expo:processReleaseManifest
+> Task :react-native-gesture-handler:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :expo:compileReleaseLibraryResources
+> Task :react-native-gesture-handler:generateReleaseRFile
+> Task :expo:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :react-native-gesture-handler:processReleaseManifest
+> Task :expo:parseReleaseLocalResources
+> Task :react-native-gesture-handler:generateReleaseBuildConfig
+> Task :expo:generateReleaseBuildConfig
+> Task :react-native-gesture-handler:javaPreCompileRelease
+> Task :expo:generateReleaseRFile
+> Task :expo:mergeReleaseShaders
+> Task :expo:compileReleaseShaders NO-SOURCE
+> Task :expo:generateReleaseAssets UP-TO-DATE
+> Task :expo:javaPreCompileRelease
+> Task :expo:mergeReleaseAssets
+> Task :expo:mergeReleaseJniLibFolders
+> Task :expo:mergeReleaseNativeLibs NO-SOURCE
+> Task :expo:copyReleaseJniLibsProjectOnly
+> Task :expo:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-gesture-handler:mergeReleaseShaders
+> Task :react-native-gesture-handler:compileReleaseShaders NO-SOURCE
+> Task :react-native-gesture-handler:generateReleaseAssets UP-TO-DATE
+> Task :react-native-webview:javaPreCompileRelease
+> Task :react-native-gesture-handler:mergeReleaseAssets
+> Task :react-native-gesture-handler:mergeReleaseJniLibFolders
+> Task :react-native-gesture-handler:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-webview:mergeReleaseShaders
+> Task :react-native-webview:compileReleaseShaders NO-SOURCE
+> Task :react-native-webview:generateReleaseAssets UP-TO-DATE
+> Task :react-native-webview:mergeReleaseAssets
+> Task :react-native-webview:mergeReleaseJniLibFolders
+> Task :react-native-webview:mergeReleaseNativeLibs NO-SOURCE
+> Task :react-native-webview:copyReleaseJniLibsProjectOnly
+> Task :react-native-webview:prepareReleaseArtProfile UP-TO-DATE
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+
+> Task :react-native-reanimated:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :react-native-reanimated:compileReleaseShaders NO-SOURCE
+> Task :react-native-reanimated:generateReleaseAssets UP-TO-DATE
+> Task :react-native-reanimated:bundleLibCompileToJarRelease
+> Task :react-native-reanimated:mergeReleaseAssets
+> Task :react-native-reanimated:processReleaseJavaRes NO-SOURCE
+> Task :react-native-reanimated:bundleLibRuntimeToJarRelease
+> Task :react-native-reanimated:mergeReleaseJniLibFolders
+> Task :react-native-reanimated:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-reanimated:bundleLibRuntimeToDirRelease
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo-router\entry.js ░░░░░░░░░░░░░░░░  1.0% (1/1)
+
+> Task :react-native-webview:compileReleaseKotlin
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:22:8 'object MapBuilder : Any' is deprecated. Use Kotlin's built-in collections extensions.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:82:18 'var allowFileAccessFromFileURLs: Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:83:18 'var allowUniversalAccessFromFileURLs: Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:124:21 'fun allowScanningByMediaScanner(): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:161:36 'var systemUiVisibility: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:300:14 'object MapBuilder : Any' is deprecated. Use Kotlin's built-in collections extensions.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:350:34 Condition is always 'true'.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:369:38 'var allowUniversalAccessFromFileURLs: Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:430:51 Unchecked cast of 'Any?' to 'HashMap<String, String>'.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:486:23 'var savePassword: Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:487:23 'var saveFormData: Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:557:23 'var allowFileAccessFromFileURLs: Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:602:52 'static field FORCE_DARK_ON: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:602:89 'static field FORCE_DARK_OFF: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:603:35 'static fun setForceDark(p0: @NonNull() WebSettings, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:612:35 'static fun setForceDarkStrategy(p0: @NonNull() WebSettings, p1: Int): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:614:39 'static field DARK_STRATEGY_PREFER_WEB_THEME_OVER_USER_AGENT_DARKENING: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:658:65 Unchecked cast of 'ArrayList<Any?>' to 'List<Map<String, String>>'.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/RNCWebViewManagerImpl.kt:679:23 'var saveFormData: Boolean' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/SubResourceErrorEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/SubResourceErrorEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/SubResourceErrorEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/SubResourceErrorEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/SubResourceErrorEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopCustomMenuSelectionEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopHttpErrorEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingErrorEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingFinishEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingProgressEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopLoadingStartEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:10:75 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:21:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:21:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopMessageEvent.kt:22:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:11:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:22:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:22:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopNewWindowEvent.kt:23:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:12:3 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:23:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:23:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopRenderProcessGoneEvent.kt:24:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:5:8 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:10:89 'constructor<T : Event<T>>(viewTag: Int): Event<T>' is deprecated. Use constructor with explicit surfaceId instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:27:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:27:42 'interface RCTEventEmitter : JavaScriptModule' is deprecated. Use [RCTModernEventEmitter] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/src/main/java/com/reactnativecommunity/webview/events/TopShouldStartLoadWithRequestEvent.kt:28:21 'fun receiveEvent(targetTag: Int, eventName: String, params: WritableMap?): Unit' is deprecated. Use [RCTModernEventEmitter.receiveEvent] instead.
+
+> Task :react-native-screens:compileReleaseKotlin
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/RNScreensPackage.kt:56:9 The corresponding parameter in the supertype 'BaseReactPackage' is named 'name'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/RNScreensPackage.kt:57:9 The corresponding parameter in the supertype 'BaseReactPackage' is named 'reactContext'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/RNScreensPackage.kt:70:17 'constructor(name: String, className: String, canOverrideExistingModule: Boolean, needsEagerInit: Boolean, hasConstants: Boolean, isCxxModule: Boolean, isTurboModule: Boolean): ReactModuleInfo' is deprecated. This constructor is deprecated and will be removed in the future. Use ReactModuleInfo(String, String, boolean, boolean, boolean, boolean)].
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/Screen.kt:48:77 Unchecked cast of '(CoordinatorLayout.Behavior<View!>?..CoordinatorLayout.Behavior<*>?)' to 'BottomSheetBehavior<Screen>'.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/Screen.kt:383:36 'fun setTranslucent(screen: Screen, activity: Activity?, context: ReactContext?): Unit' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/Screen.kt:402:36 'fun setColor(screen: Screen, activity: Activity?, context: ReactContext?): Unit' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/Screen.kt:420:36 'fun setNavigationBarColor(screen: Screen, activity: Activity?): Unit' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/Screen.kt:437:36 'fun setNavigationBarTranslucent(screen: Screen, activity: Activity?): Unit' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:217:31 'var targetElevation: Float' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:220:13 'fun setHasOptionsMenu(p0: Boolean): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:397:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:404:22 'fun onPrepareOptionsMenu(p0: Menu): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:407:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:412:22 'fun onCreateOptionsMenu(p0: Menu, p1: MenuInflater): Unit' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackHeaderConfig.kt:435:18 'val reactNativeHost: ReactNativeHost' is deprecated. You should not use ReactNativeHost directly in the New Architecture. Use ReactHost instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:203:14 'var statusBarColor: Int?' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:220:14 'var isStatusBarTranslucent: Boolean?' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:237:14 'var navigationBarColor: Int?' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:246:14 'var isNavigationBarTranslucent: Boolean?' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:55:42 'fun replaceSystemWindowInsets(p0: Int, p1: Int, p2: Int, p3: Int): WindowInsetsCompat' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:56:39 'val systemWindowInsetLeft: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:58:39 'val systemWindowInsetRight: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:59:39 'val systemWindowInsetBottom: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:102:53 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:106:37 'var statusBarColor: Int?' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:113:48 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:116:32 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:162:49 'var isStatusBarTranslucent: Boolean?' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:218:43 'var navigationBarColor: Int?' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:218:72 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:224:16 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:241:55 'var isNavigationBarTranslucent: Boolean?' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:283:13 'fun setColor(screen: Screen, activity: Activity?, context: ReactContext?): Unit' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:285:13 'fun setTranslucent(screen: Screen, activity: Activity?, context: ReactContext?): Unit' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:289:13 'fun setNavigationBarColor(screen: Screen, activity: Activity?): Unit' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:290:13 'fun setNavigationBarTranslucent(screen: Screen, activity: Activity?): Unit' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:354:42 'var statusBarColor: Int?' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:356:48 'var isStatusBarTranslucent: Boolean?' is deprecated. For apps targeting SDK 35 or above this prop has no effect because edge-to-edge is enabled by default and the status bar is always translucent.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:359:57 'var navigationBarColor: Int?' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:360:63 'var isNavigationBarTranslucent: Boolean?' is deprecated. For all apps targeting Android SDK 35 or above edge-to-edge is enabled by default.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:7:8 'object ReactFeatureFlags : Any' is deprecated. Use com.facebook.react.internal.featureflags.ReactNativeFeatureFlags instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:25:13 'object ReactFeatureFlags : Any' is deprecated. Use com.facebook.react.internal.featureflags.ReactNativeFeatureFlags instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:32:9 The corresponding parameter in the supertype 'ReactViewGroup' is named 'left'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:33:9 The corresponding parameter in the supertype 'ReactViewGroup' is named 'top'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:34:9 The corresponding parameter in the supertype 'ReactViewGroup' is named 'right'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:35:9 The corresponding parameter in the supertype 'ReactViewGroup' is named 'bottom'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:71:9 The corresponding parameter in the supertype 'RootView' is named 'childView'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:72:9 The corresponding parameter in the supertype 'RootView' is named 'ev'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:79:46 The corresponding parameter in the supertype 'RootView' is named 'ev'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:83:9 The corresponding parameter in the supertype 'RootView' is named 'childView'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:84:9 The corresponding parameter in the supertype 'RootView' is named 'ev'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/BottomSheetDialogRootView.kt:95:34 The corresponding parameter in the supertype 'RootView' is named 't'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/DimmingView.kt:63:9 The corresponding parameter in the supertype 'ReactCompoundView' is named 'touchX'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/DimmingView.kt:64:9 The corresponding parameter in the supertype 'ReactCompoundView' is named 'touchY'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/DimmingView.kt:68:9 The corresponding parameter in the supertype 'ReactCompoundViewGroup' is named 'touchX'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/bottomsheet/DimmingView.kt:69:9 The corresponding parameter in the supertype 'ReactCompoundViewGroup' is named 'touchY'. This may cause problems when calling this function with named arguments.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/gamma/tabs/TabsHostViewManager.kt:37:9 The corresponding parameter in the supertype 'TabsHostViewManager' is named 'view'. This may cause problems when calling this function with named arguments.
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo-router\entry.js ▓▓░░░░░░░░░░░░░░ 17.0% (26/78)
+Android node_modules\expo-router\entry.js ▓▓▓░░░░░░░░░░░░░ 22.1% ( 57/124)
+
+> Task :react-native-worklets:configureCMakeRelWithDebInfo[arm64-v8a]
+
+> Task :react-native-gesture-handler:compileReleaseKotlin
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/react/RNGestureHandlerRootView.kt:41:43 The corresponding parameter in the supertype 'ReactViewGroup' is named 'ev'. This may cause problems when calling this function with named arguments.
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo-router\entry.js ▓▓▓▓░░░░░░░░░░░░ 28.2% (116/277)
+
+> Task :react-native-screens:configureCMakeRelWithDebInfo[arm64-v8a]
+
+> Task :react-native-webview:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo-router\entry.js ▓▓▓▓░░░░░░░░░░░░ 28.5% (180/343)
+
+> Task :react-native-webview:bundleLibCompileToJarRelease
+> Task :react-native-webview:processReleaseJavaRes
+> Task :react-native-webview:bundleLibRuntimeToJarRelease
+> Task :react-native-webview:bundleLibRuntimeToDirRelease
+> Task :react-native-gesture-handler:compileReleaseJavaWithJavac
+> Task :react-native-gesture-handler:bundleLibCompileToJarRelease
+> Task :react-native-gesture-handler:bundleLibRuntimeToJarRelease
+> Task :react-native-gesture-handler:processReleaseJavaRes
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 45.3% (276/410)
+
+> Task :react-native-gesture-handler:bundleLibRuntimeToDirRelease
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 49.7% (447/676)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 49.7% (489/734)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 55.6% (578/775)
+
+> Task :expo-modules-core:compileReleaseKotlin
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/adapters/react/apploader/RNHeadlessAppLoader.kt:48:87 'val reactNativeHost: ReactNativeHost' is deprecated. You should not use ReactNativeHost directly in the New Architecture. Use ReactHost instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/adapters/react/apploader/RNHeadlessAppLoader.kt:91:85 'val reactNativeHost: ReactNativeHost' is deprecated. You should not use ReactNativeHost directly in the New Architecture. Use ReactHost instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/adapters/react/apploader/RNHeadlessAppLoader.kt:120:83 'val reactNativeHost: ReactNativeHost' is deprecated. You should not use ReactNativeHost directly in the New Architecture. Use ReactHost instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/apploader/AppLoaderProvider.kt:34:52 Unchecked cast of 'Class<*>!' to 'Class<out HeadlessAppLoader>'.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/AppContext.kt:30:8 'typealias ErrorManagerModule = JSLoggerModule' is deprecated. Use JSLoggerModule instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/AppContext.kt:253:21 'typealias ErrorManagerModule = JSLoggerModule' is deprecated. Use JSLoggerModule instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/AppContext.kt:343:21 'val DEFAULT: Int' is deprecated. UIManagerType.DEFAULT will be deleted in the next release of React Native. Use [LEGACY] instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/defaultmodules/NativeModulesProxyModule.kt:16:5 'fun Constants(legacyConstantsProvider: () -> Map<String, Any?>): Unit' is deprecated. Use `Constant` or `Property` instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/jni/PromiseImpl.kt:65:51 'val errorManager: JSLoggerModule?' is deprecated. Use AppContext.jsLogger instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/jni/PromiseImpl.kt:69:22 'fun reportExceptionToLogBox(codedException: CodedException): Unit' is deprecated. Use appContext.jsLogger.error(...) instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/views/ViewDefinitionBuilder.kt:464:16 'val errorManager: JSLoggerModule?' is deprecated. Use AppContext.jsLogger instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/views/ViewDefinitionBuilder.kt:464:30 'fun reportExceptionToLogBox(codedException: CodedException): Unit' is deprecated. Use appContext.jsLogger.error(...) instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/views/ViewManagerDefinition.kt:41:16 'val errorManager: JSLoggerModule?' is deprecated. Use AppContext.jsLogger instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/views/ViewManagerDefinition.kt:41:30 'fun reportExceptionToLogBox(codedException: CodedException): Unit' is deprecated. Use appContext.jsLogger.error(...) instead.
+
+> Task :app:createBundleReleaseJsAndAssets
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 67.5% (746/908)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 79.8% (885/991)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 79.9% (1093/1233)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 81.0% (1127/2966)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 81.0% (1240/3040)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 81.0% (1923/3056)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 81.0% (2505/3056)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.6% (3014/3083)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.3% (3287/3358)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (3380/3380)
+Android Bundled 70419ms node_modules\expo-router\entry.js (3380 modules)
+Android node_modules\expo-router\entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (3380/3380)
+Writing bundle output to: android\app\build\generated\assets\createBundleReleaseJsAndAssets\index.android.bundle
+Writing sourcemap output to: android\app\build\intermediates\sourcemaps\react\release\index.android.bundle.packager.map
+Copying 73 asset files
+Done writing bundle output
+Done writing sourcemap output
+
+> Task :expo-modules-core:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning (dev) in CMakeLists.txt:
+C/C++:   CMAKE_OBJECT_PATH_MAX is set to 50, which is less than the minimum of 128.
+C/C++:   The value will be ignored.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+C/C++: CMake Warning (dev) in src/fabric/CMakeLists.txt:
+C/C++:   CMAKE_OBJECT_PATH_MAX is set to 50, which is less than the minimum of 128.
+C/C++:   The value will be ignored.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+
+> Task :react-native-worklets:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning (dev) in CMakeLists.txt:
+C/C++:   CMAKE_OBJECT_PATH_MAX is set to 50, which is less than the minimum of 128.
+C/C++:   The value will be ignored.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+
+> Task :react-native-screens:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning (dev) in CMakeLists.txt:
+C/C++:   CMAKE_OBJECT_PATH_MAX is set to 50, which is less than the minimum of 128.
+C/C++:   The value will be ignored.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+C/C++: CMake Warning:
+C/C++:   Manually-specified variables were not used by the project:
+C/C++:     ANDROID_LD
+C/C++:     ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES
+
+> Task :react-native-worklets:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning:
+C/C++:   Manually-specified variables were not used by the project:
+C/C++:     ANDROID_LD
+C/C++:     ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES
+
+> Task :react-native-worklets:generateJsonModelRelease
+> Task :react-native-worklets:prefabReleaseConfigurePackage
+
+> Task :expo-modules-core:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning:
+C/C++:   Manually-specified variables were not used by the project:
+C/C++:     ANDROID_LD
+C/C++:     ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES
+
+> Task :expo-modules-core:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:generateAutolinkingNewArchitectureFiles
+> Task :app:generateAutolinkingPackageList
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+> Task :app:generateReactNativeEntryPoint
+> Task :app:preBuild
+> Task :app:preReleaseBuild
+> Task :app:generateReleaseResValues
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources
+> Task :react-native-screens:compileReleaseJavaWithJavac
+> Task :expo-modules-core:processReleaseJavaRes
+> Task :react-native-screens:processReleaseJavaRes
+> Task :react-native-screens:bundleLibRuntimeToJarRelease
+> Task :react-native-screens:bundleLibCompileToJarRelease
+> Task :expo-modules-core:bundleLibRuntimeToJarRelease
+> Task :expo-modules-core:bundleLibCompileToJarRelease
+> Task :react-native-worklets:buildCMakeRelWithDebInfo[arm64-v8a][worklets]
+> Task :react-native-reanimated:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :react-native-screens:bundleLibRuntimeToDirRelease
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+
+> Task :app:processReleaseMainManifest
+C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\android\app\src\main\AndroidManifest.xml Warning:
+	provider#expo.modules.filesystem.FileSystemFileProvider@android:authorities was tagged at AndroidManifest.xml:0 to replace other declarations but no other declaration present
+
+> Task :app:processReleaseManifest
+> Task :app:processApplicationManifestReleaseForBundle
+> Task :app:checkReleaseAarMetadata
+> Task :app:mergeReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:parseReleaseLocalResources
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:buildKotlinToolingMetadata
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateReleaseBuildConfig
+> Task :app:javaPreCompileRelease
+> Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseStartupProfile UP-TO-DATE
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:checkReleaseDuplicateClasses
+> Task :expo-modules-core:bundleLibRuntimeToDirRelease
+> Task :expo-modules-core:buildCMakeRelWithDebInfo[arm64-v8a]
+> Task :react-native-screens:buildCMakeRelWithDebInfo[arm64-v8a]
+> Task :app:mergeReleaseAssets
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:writeReleaseAppMetadata
+> Task :react-native-screens:mergeReleaseJniLibFolders
+> Task :react-native-screens:prepareReleaseArtProfile UP-TO-DATE
+> Task :app:processReleaseManifestForPackage
+> Task :react-native-screens:mergeReleaseNativeLibs
+> Task :react-native-screens:copyReleaseJniLibsProjectOnly
+> Task :app:collectReleaseDependencies
+> Task :app:configureReleaseDependencies
+> Task :app:parseReleaseIntegrityConfig UP-TO-DATE
+> Task :app:validateSigningRelease
+> Task :react-native-worklets:externalNativeBuildRelease
+> Task :react-native-worklets:prefabReleasePackage
+> Task :react-native-worklets:mergeReleaseJniLibFolders
+> Task :react-native-worklets:prepareReleaseArtProfile UP-TO-DATE
+> Task :react-native-worklets:mergeReleaseNativeLibs
+> Task :react-native-worklets:copyReleaseJniLibsProjectOnly
+> Task :expo-modules-core:mergeReleaseJniLibFolders
+> Task :expo-modules-core:prepareReleaseArtProfile UP-TO-DATE
+> Task :expo-modules-core:mergeReleaseNativeLibs
+> Task :expo-modules-core:copyReleaseJniLibsProjectOnly
+> Task :app:mergeExtDexRelease
+
+> Task :expo-constants:compileReleaseKotlin
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo-constants/android/src/main/java/expo/modules/constants/ConstantsModule.kt:12:5 'fun Constants(legacyConstantsProvider: () -> Map<String, Any?>): Unit' is deprecated. Use `Constant` or `Property` instead.
+
+> Task :expo-constants:compileReleaseJavaWithJavac
+> Task :expo-constants:bundleLibCompileToJarRelease
+> Task :expo-constants:bundleLibRuntimeToJarRelease
+> Task :expo-constants:processReleaseJavaRes
+> Task :expo-constants:bundleLibRuntimeToDirRelease
+> Task :app:mergeReleaseArtProfile
+
+> Task :react-native-reanimated:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning (dev) in CMakeLists.txt:
+C/C++:   CMAKE_OBJECT_PATH_MAX is set to 50, which is less than the minimum of 128.
+C/C++:   The value will be ignored.
+C/C++: This warning is for project developers.  Use -Wno-dev to suppress it.
+C/C++: CMake Warning in CMakeLists.txt:
+C/C++:   The object file directory
+C/C++:     C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-reanimated/android/.cxx/RelWithDebInfo/5473p4h5/arm64-v8a/CMakeFiles/reanimated.dir/./
+C/C++:   has 182 characters.  The maximum full path to an object file is 250
+C/C++:   characters (see CMAKE_OBJECT_PATH_MAX).  Object file
+C/C++:     Common/cpp/reanimated/CSS/interpolation/transforms/TransformOperationInterpolator.cpp.o
+C/C++:   cannot be safely placed under this directory.  The build may not work
+C/C++:   correctly.
+C/C++: CMake Warning:
+C/C++:   Manually-specified variables were not used by the project:
+C/C++:     ANDROID_LD
+C/C++:     ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES
+
+> Task :react-native-reanimated:generateJsonModelRelease
+> Task :react-native-reanimated:prefabReleaseConfigurePackage
+> Task :app:processReleaseResources
+
+> Task :expo:compileReleaseKotlin
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ExpoModulesPackage.kt:34:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ExpoReactHostFactory.kt:8:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ExpoReactHostFactory.kt:80:22 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:24:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:58:33 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:105:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:105:38 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:113:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:114:21 'val reactInstanceManager: ReactInstanceManager' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:168:36 'constructor(activity: Activity, reactNativeHost: ReactNativeHost?, appKey: String?, launchOptions: Bundle?, fabricEnabled: Boolean): ReactDelegate' is deprecated. Deprecated since 0.81.0, use one of the other constructors instead.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:279:77 'val reactInstanceManager: ReactInstanceManager' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:282:22 'val reactInstanceManager: ReactInstanceManager' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:286:54 'val reactInstanceManager: ReactInstanceManager' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapper.kt:6:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapper.kt:15:9 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapper.kt:47:60 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapperBase.kt:7:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapperBase.kt:16:23 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapperBase.kt:89:16 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapperBase.kt:101:38 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/fetch/ExpoFetchModule.kt:30:39 'constructor(reactContext: ReactContext): ForwardingCookieHandler' is deprecated. Use the default constructor.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:42:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:44:11 'fun deallocate(): Unit' is deprecated. Use sharedObjectDidRelease() instead.
+
+> Task :react-native-gesture-handler:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :app:configureCMakeRelWithDebInfo[arm64-v8a]
+> Task :react-native-reanimated:buildCMakeRelWithDebInfo[arm64-v8a][reanimated]
+> Task :expo:compileReleaseJavaWithJavac
+> Task :expo:processReleaseJavaRes
+> Task :expo:bundleLibRuntimeToJarRelease
+> Task :expo:bundleLibCompileToJarRelease
+> Task :expo:bundleLibRuntimeToDirRelease
+> Task :react-native-reanimated:externalNativeBuildRelease
+> Task :react-native-reanimated:prefabReleasePackage
+> Task :react-native-reanimated:mergeReleaseNativeLibs
+> Task :react-native-reanimated:copyReleaseJniLibsProjectOnly
+
+> Task :react-native-gesture-handler:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning:
+C/C++:   Manually-specified variables were not used by the project:
+C/C++:     ANDROID_LD
+C/C++:     ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES
+
+> Task :app:configureCMakeRelWithDebInfo[arm64-v8a]
+C/C++: CMake Warning:
+C/C++:   Manually-specified variables were not used by the project:
+C/C++:     ANDROID_LD
+C/C++:     ANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES
+
+> Task :react-native-gesture-handler:buildCMakeRelWithDebInfo[arm64-v8a]
+> Task :react-native-gesture-handler:mergeReleaseNativeLibs
+> Task :react-native-gesture-handler:copyReleaseJniLibsProjectOnly
+
+> Task :app:compileReleaseKotlin
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/android/app/src/main/java/com/maxsas/ai/livekit/MainApplication.kt:9:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/android/app/src/main/java/com/maxsas/ai/livekit/MainApplication.kt:21:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/android/app/src/main/java/com/maxsas/ai/livekit/MainApplication.kt:21:33 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+
+> Task :app:buildCMakeRelWithDebInfo[arm64-v8a]
+C/C++: ninja: Entering directory `C:\cxx\maxsas\RelWithDebInfo\5m2r5w52\arm64-v8a'
+C/C++: In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/Props.cpp:13:
+C/C++: In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+C/C++: C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+C/C++:       return std::format("{}%", dimension.value);
+C/C++:              ~~~~~^
+C/C++: 1 error generated.
+C/C++: In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/Props.cpp:13:
+C/C++: In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+C/C++: C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+C/C++:       return std::format("{}%", dimension.value);
+C/C++:              ~~~~~^
+C/C++: 1 error generated.
+
+> Task :app:bundleReleaseResources
+
+> Task :app:buildCMakeRelWithDebInfo[arm64-v8a] FAILED
+C/C++: In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp:14:
+C/C++: In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/safeareacontext.h:6:
+C/C++: In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewComponentDescriptor.h:3:
+C/C++: In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewShadowNode.h:5:
+C/C++: In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/Props.h:14:
+C/C++: In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+C/C++: C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+C/C++:       return std::format("{}%", dimension.value);
+C/C++:              ~~~~~^
+C/C++: 1 error generated.
+
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:dexBuilderRelease
+> Task :app:processReleaseJavaRes
+> Task :app:mergeReleaseGlobalSynthetics
+> Task :app:mergeReleaseJavaResource
+> Task :app:mergeDexRelease
+> Task :app:compileReleaseArtProfile
+
+[Incubating] Problems report is available at: file:///C:/Users/Anubhav%20Chaudhary/Documents/MAXSAS%20AI%20WORK/Maxsas-AI-Livekit/android/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:buildCMakeRelWithDebInfo[arm64-v8a]'.
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `C:\cxx\maxsas\RelWithDebInfo\5m2r5w52\arm64-v8a'
+  [0/2] Re-checking globbed directories...
+  [1/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/States.cpp.o
+  [2/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o
+  FAILED: rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o 
+  C:\Users\ANUBHA~1\AppData\Local\Android\Sdk\ndk\263~1.115\TOOLCH~1\llvm\prebuilt\WINDOW~1\bin\CLANG_~1.EXE --target=aarch64-none-linux-android24 --sysroot="C:/Users/Anubhav Chaudhary/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot" -DRN_SERIALIZABLE_STATE -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/9695d72b1809120fbe6fc8c97a9672aa/transformed/fbjni-0.7.0/prefab/modules/fbjni/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/jsi/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -Wall -Werror -fexceptions -frtti -std=c++20 -DFOLLY_NO_CONFIG=1 -DLOG_TAG=\"ReactNative\" -DFOLLY_HAVE_CLOCK_GETTIME=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -DFOLLY_MOBILE=1 -DFOLLY_HAVE_RECVMMSG=1 -DFOLLY_HAVE_PTHREAD=1 -DFOLLY_HAVE_XSI_STRERROR_R=1 -std=gnu++20 -MD -MT rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o -MF rnasyncstorage_autolinked_build\CMakeFiles\react_codegen_rnasyncstorage.dir\react\renderer\components\rnasyncstorage\Props.cpp.o.d -o rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o -c "C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/Props.cpp"
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/Props.cpp:13:
+  In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+  C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+        return std::format("{}%", dimension.value);
+               ~~~~~^
+  1 error generated.
+  [3/79] Building CXX object rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/EventEmitters.cpp.o
+  [4/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/EventEmitters.cpp.o
+  [5/79] Building CXX object rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/rnreanimated-generated.cpp.o
+  [6/79] Building CXX object rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/rnreanimatedJSI-generated.cpp.o
+  [7/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/rnasyncstorageJSI-generated.cpp.o
+  [8/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ShadowNodes.cpp.o
+  [9/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ComponentDescriptors.cpp.o
+  [10/79] Building CXX object rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o
+  FAILED: rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o 
+  C:\Users\ANUBHA~1\AppData\Local\Android\Sdk\ndk\263~1.115\TOOLCH~1\llvm\prebuilt\WINDOW~1\bin\CLANG_~1.EXE --target=aarch64-none-linux-android24 --sysroot="C:/Users/Anubhav Chaudhary/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot" -DRN_SERIALIZABLE_STATE -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/9695d72b1809120fbe6fc8c97a9672aa/transformed/fbjni-0.7.0/prefab/modules/fbjni/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/jsi/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -Wall -Werror -fexceptions -frtti -std=c++20 -DFOLLY_NO_CONFIG=1 -DLOG_TAG=\"ReactNative\" -DFOLLY_HAVE_CLOCK_GETTIME=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -DFOLLY_MOBILE=1 -DFOLLY_HAVE_RECVMMSG=1 -DFOLLY_HAVE_PTHREAD=1 -DFOLLY_HAVE_XSI_STRERROR_R=1 -std=gnu++20 -MD -MT rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o -MF rngesturehandler_codegen_autolinked_build\CMakeFiles\react_codegen_rngesturehandler_codegen.dir\react\renderer\components\rngesturehandler_codegen\Props.cpp.o.d -o rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o -c "C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/Props.cpp"
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/Props.cpp:13:
+  In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+  C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+        return std::format("{}%", dimension.value);
+               ~~~~~^
+  1 error generated.
+  [11/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/rnasyncstorage-generated.cpp.o
+  [12/79] Building CXX object CMakeFiles/appmodules.dir/OnLoad.cpp.o
+  [13/79] Building CXX object rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/ComponentDescriptors.cpp.o
+  [14/79] Building CXX object rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/ShadowNodes.cpp.o
+  [15/79] Building CXX object CMakeFiles/appmodules.dir/C_/Users/Anubhav_Chaudhary/Documents/MAXSAS_AI_WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o
+  FAILED: CMakeFiles/appmodules.dir/C_/Users/Anubhav_Chaudhary/Documents/MAXSAS_AI_WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o 
+  C:\Users\ANUBHA~1\AppData\Local\Android\Sdk\ndk\263~1.115\TOOLCH~1\llvm\prebuilt\WINDOW~1\bin\CLANG_~1.EXE --target=aarch64-none-linux-android24 --sysroot="C:/Users/Anubhav Chaudhary/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot" -DRN_SERIALIZABLE_STATE -Dappmodules_EXPORTS -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/9695d72b1809120fbe6fc8c97a9672aa/transformed/fbjni-0.7.0/prefab/modules/fbjni/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/jsi/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -Wall -Werror -fexceptions -frtti -std=c++20 -DFOLLY_NO_CONFIG=1 -DLOG_TAG=\"ReactNative\" -DFOLLY_HAVE_CLOCK_GETTIME=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -DFOLLY_MOBILE=1 -DFOLLY_HAVE_RECVMMSG=1 -DFOLLY_HAVE_PTHREAD=1 -DFOLLY_HAVE_XSI_STRERROR_R=1 -std=gnu++20 -MD -MT CMakeFiles/appmodules.dir/C_/Users/Anubhav_Chaudhary/Documents/MAXSAS_AI_WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o -MF CMakeFiles\appmodules.dir\C_\Users\Anubhav_Chaudhary\Documents\MAXSAS_AI_WORK\Maxsas-AI-Livekit\android\app\build\generated\autolinking\src\main\jni\autolinking.cpp.o.d -o CMakeFiles/appmodules.dir/C_/Users/Anubhav_Chaudhary/Documents/MAXSAS_AI_WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o -c "C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp"
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp:14:
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/safeareacontext.h:6:
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewComponentDescriptor.h:3:
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewShadowNode.h:5:
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/Props.h:14:
+  In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+  C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+        return std::format("{}%", dimension.value);
+               ~~~~~^
+  1 error generated.
+  ninja: build stopped: subcommand failed.
+  
+  C++ build system [build] failed while executing:
+      @echo off
+      "C:\\Users\\Anubhav Chaudhary\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "C:\\cxx\\maxsas\\RelWithDebInfo\\5m2r5w52\\arm64-v8a" ^
+        appmodules ^
+        react_codegen_rnscreens ^
+        react_codegen_rnsvg ^
+        react_codegen_safeareacontext
+    from C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\android\app
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 7m 8s
+348 actionable tasks: 311 executed, 37 up-to-date
+
+
+
+In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/Props.cpp:13:
+In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+      return std::format("{}%", dimension.value);
+             ~~~~~^
+Fix with AI
+
+In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/Props.cpp:13:
+In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+      return std::format("{}%", dimension.value);
+             ~~~~~^
+Fix with AI
+
+In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp:14:
+In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/safeareacontext.h:6:
+In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewComponentDescriptor.h:3:
+In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewShadowNode.h:5:
+In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/Props.h:14:
+In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+      return std::format("{}%", dimension.value);
+             ~~~~~^
+Fix with AI
+
+Execution failed for task ':app:buildCMakeRelWithDebInfo[arm64-v8a]'.
+> com.android.ide.common.process.ProcessException: ninja: Entering directory `C:\cxx\maxsas\RelWithDebInfo\5m2r5w52\arm64-v8a'
+  [0/2] Re-checking globbed directories...
+  [1/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/States.cpp.o
+  [2/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o
+  FAILED: rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o 
+  C:\Users\ANUBHA~1\AppData\Local\Android\Sdk\ndk\263~1.115\TOOLCH~1\llvm\prebuilt\WINDOW~1\bin\CLANG_~1.EXE --target=aarch64-none-linux-android24 --sysroot="C:/Users/Anubhav Chaudhary/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot" -DRN_SERIALIZABLE_STATE -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/9695d72b1809120fbe6fc8c97a9672aa/transformed/fbjni-0.7.0/prefab/modules/fbjni/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/jsi/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -Wall -Werror -fexceptions -frtti -std=c++20 -DFOLLY_NO_CONFIG=1 -DLOG_TAG=\"ReactNative\" -DFOLLY_HAVE_CLOCK_GETTIME=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -DFOLLY_MOBILE=1 -DFOLLY_HAVE_RECVMMSG=1 -DFOLLY_HAVE_PTHREAD=1 -DFOLLY_HAVE_XSI_STRERROR_R=1 -std=gnu++20 -MD -MT rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o -MF rnasyncstorage_autolinked_build\CMakeFiles\react_codegen_rnasyncstorage.dir\react\renderer\components\rnasyncstorage\Props.cpp.o.d -o rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/Props.cpp.o -c "C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/Props.cpp"
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage/Props.cpp:13:
+  In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+  C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+        return std::format("{}%", dimension.value);
+               ~~~~~^
+  1 error generated.
+  [3/79] Building CXX object rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/EventEmitters.cpp.o
+  [4/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/EventEmitters.cpp.o
+  [5/79] Building CXX object rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/rnreanimated-generated.cpp.o
+  [6/79] Building CXX object rnreanimated_autolinked_build/CMakeFiles/react_codegen_rnreanimated.dir/react/renderer/components/rnreanimated/rnreanimatedJSI-generated.cpp.o
+  [7/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/rnasyncstorageJSI-generated.cpp.o
+  [8/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ShadowNodes.cpp.o
+  [9/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/react/renderer/components/rnasyncstorage/ComponentDescriptors.cpp.o
+  [10/79] Building CXX object rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o
+  FAILED: rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o 
+  C:\Users\ANUBHA~1\AppData\Local\Android\Sdk\ndk\263~1.115\TOOLCH~1\llvm\prebuilt\WINDOW~1\bin\CLANG_~1.EXE --target=aarch64-none-linux-android24 --sysroot="C:/Users/Anubhav Chaudhary/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot" -DRN_SERIALIZABLE_STATE -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/9695d72b1809120fbe6fc8c97a9672aa/transformed/fbjni-0.7.0/prefab/modules/fbjni/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/jsi/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -Wall -Werror -fexceptions -frtti -std=c++20 -DFOLLY_NO_CONFIG=1 -DLOG_TAG=\"ReactNative\" -DFOLLY_HAVE_CLOCK_GETTIME=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -DFOLLY_MOBILE=1 -DFOLLY_HAVE_RECVMMSG=1 -DFOLLY_HAVE_PTHREAD=1 -DFOLLY_HAVE_XSI_STRERROR_R=1 -std=gnu++20 -MD -MT rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o -MF rngesturehandler_codegen_autolinked_build\CMakeFiles\react_codegen_rngesturehandler_codegen.dir\react\renderer\components\rngesturehandler_codegen\Props.cpp.o.d -o rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/Props.cpp.o -c "C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/Props.cpp"
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen/Props.cpp:13:
+  In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+  C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+        return std::format("{}%", dimension.value);
+               ~~~~~^
+  1 error generated.
+  [11/79] Building CXX object rnasyncstorage_autolinked_build/CMakeFiles/react_codegen_rnasyncstorage.dir/rnasyncstorage-generated.cpp.o
+  [12/79] Building CXX object CMakeFiles/appmodules.dir/OnLoad.cpp.o
+  [13/79] Building CXX object rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/ComponentDescriptors.cpp.o
+  [14/79] Building CXX object rngesturehandler_codegen_autolinked_build/CMakeFiles/react_codegen_rngesturehandler_codegen.dir/react/renderer/components/rngesturehandler_codegen/ShadowNodes.cpp.o
+  [15/79] Building CXX object CMakeFiles/appmodules.dir/C_/Users/Anubhav_Chaudhary/Documents/MAXSAS_AI_WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o
+  FAILED: CMakeFiles/appmodules.dir/C_/Users/Anubhav_Chaudhary/Documents/MAXSAS_AI_WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o 
+  C:\Users\ANUBHA~1\AppData\Local\Android\Sdk\ndk\263~1.115\TOOLCH~1\llvm\prebuilt\WINDOW~1\bin\CLANG_~1.EXE --target=aarch64-none-linux-android24 --sysroot="C:/Users/Anubhav Chaudhary/AppData/Local/Android/Sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/windows-x86_64/sysroot" -DRN_SERIALIZABLE_STATE -Dappmodules_EXPORTS -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/@react-native-async-storage/async-storage/android/build/generated/source/codegen/jni/react/renderer/components/rnasyncstorage" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-gesture-handler/android/build/generated/source/codegen/jni/react/renderer/components/rngesturehandler_codegen" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-reanimated/android/build/generated/source/codegen/jni/react/renderer/components/rnreanimated" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-screens/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnscreens" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni/../../../../common/cpp" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-svg/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/rnsvg" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-webview/android/build/generated/source/codegen/jni/react/renderer/components/RNCWebViewSpec" -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/." -I"C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-worklets/android/build/generated/source/codegen/jni/react/renderer/components/rnworklets" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/9695d72b1809120fbe6fc8c97a9672aa/transformed/fbjni-0.7.0/prefab/modules/fbjni/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/jsi/include" -isystem "C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include" -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -Wall -Werror -fexceptions -frtti -std=c++20 -DFOLLY_NO_CONFIG=1 -DLOG_TAG=\"ReactNative\" -DFOLLY_HAVE_CLOCK_GETTIME=1 -DFOLLY_USE_LIBCPP=1 -DFOLLY_CFG_NO_COROUTINES=1 -DFOLLY_MOBILE=1 -DFOLLY_HAVE_RECVMMSG=1 -DFOLLY_HAVE_PTHREAD=1 -DFOLLY_HAVE_XSI_STRERROR_R=1 -std=gnu++20 -MD -MT CMakeFiles/appmodules.dir/C_/Users/Anubhav_Chaudhary/Documents/MAXSAS_AI_WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o -MF CMakeFiles\appmodules.dir\C_\Users\Anubhav_Chaudhary\Documents\MAXSAS_AI_WORK\Maxsas-AI-Livekit\android\app\build\generated\autolinking\src\main\jni\autolinking.cpp.o.d -o CMakeFiles/appmodules.dir/C_/Users/Anubhav_Chaudhary/Documents/MAXSAS_AI_WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o -c "C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp"
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp:14:
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/safeareacontext.h:6:
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewComponentDescriptor.h:3:
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../../common/cpp/react/renderer/components/safeareacontext/RNCSafeAreaViewShadowNode.h:5:
+  In file included from C:/Users/Anubhav Chaudhary/Documents/MAXSAS AI WORK/Maxsas-AI-Livekit/node_modules/react-native-safe-area-context/android/src/main/jni/../../../build/generated/source/codegen/jni/react/renderer/components/safeareacontext/Props.h:14:
+  In file included from C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/propsConversions.h:15:
+  C:/Users/Anubhav Chaudhary/.gradle/caches/8.14.3/transforms/4161b50782207c195b15f232171bc90b/transformed/react-android-0.81.5-release/prefab/modules/reactnative/include/react/renderer/core/graphicsConversions.h:80:19: error: no member named 'format' in namespace 'std'
+        return std::format("{}%", dimension.value);
+               ~~~~~^
+  1 error generated.
+  ninja: build stopped: subcommand failed.
+  
+  C++ build system [build] failed while executing:
+      @echo off
+      "C:\\Users\\Anubhav Chaudhary\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe" ^
+        -C ^
+        "C:\\cxx\\maxsas\\RelWithDebInfo\\5m2r5w52\\arm64-v8a" ^
+        appmodules ^
+        react_codegen_rnscreens ^
+        react_codegen_rnsvg ^
+        react_codegen_safeareacontext
+    from C:\Users\Anubhav Chaudhary\Documents\MAXSAS AI WORK\Maxsas-AI-Livekit\android\app
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+Fix with AI

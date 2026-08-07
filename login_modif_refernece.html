@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<title>Maxsas Realty AI — Sign In</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Space+Grotesk:wght@400..700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<style>
+/* ─── RESET ─── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;scroll-behavior:smooth}
+body{min-height:100dvh;font-family:'Inter',sans-serif;font-size:14px;background:#04060f;color:#f0f4ff;overflow-x:hidden}
+img,svg{display:block;max-width:100%;height:auto}
+input,button,select{font:inherit;color:inherit;border:none;outline:none;background:none}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid #00d4ff;outline-offset:3px;border-radius:6px}
+
+/* ─── TOKENS ─── */
+:root{
+  --bg:       #04060f;
+  --card:     #080c18;
+  --elevated: #0d1525;
+  --border:   rgba(255,255,255,0.07);
+  --border-a: rgba(0,212,255,0.22);
+  --cyan:     #00d4ff;
+  --violet:   #7c3aed;
+  --emerald:  #10b981;
+  --rose:     #f43f5e;
+  --amber:    #f59e0b;
+  --t1:       #f0f4ff;
+  --t2:       #8892a4;
+  --t3:       #4a5568;
+  --r-sm: 8px; --r-md:12px; --r-lg:16px; --r-xl:20px; --r-full:9999px;
+  --shadow: 0 4px 32px rgba(0,0,0,0.5);
+  --shadow-glow: 0 0 40px rgba(0,212,255,0.18);
+}
+
+/* ─── PAGE LAYOUT ─── */
+.page{
+  min-height:100dvh;
+  display:grid;
+  grid-template-columns:1fr;
+  position:relative;
+  isolation:isolate;
+}
+@media(min-width:900px){
+  .page{grid-template-columns:1fr 460px}
+}
+
+/* ─── BACKGROUND ─── */
+.bg-aurora{
+  position:fixed;inset:0;z-index:-1;
+  background:#04060f;
+}
+.bg-aurora::before{
+  content:'';position:absolute;
+  top:-15%;left:-10%;
+  width:55vw;height:55vw;max-width:600px;max-height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,212,255,0.08) 0%,transparent 65%);
+  pointer-events:none;
+}
+.bg-aurora::after{
+  content:'';position:absolute;
+  bottom:-10%;right:-10%;
+  width:50vw;height:50vw;max-width:560px;max-height:560px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(124,58,237,0.09) 0%,transparent 65%);
+  pointer-events:none;
+}
+/* Fine grid dots */
+.bg-grid{
+  position:fixed;inset:0;z-index:-1;
+  background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);
+  background-size:32px 32px;
+  mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,#000 30%,transparent 100%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,#000 30%,transparent 100%);
+}
+
+/* ─── LEFT PANEL (Web only) ─── */
+.left-panel{
+  display:none;
+  padding:48px 56px;
+  flex-direction:column;
+  justify-content:center;
+  gap:40px;
+  position:relative;
+  overflow:hidden;
+}
+@media(min-width:900px){.left-panel{display:flex}}
+
+.left-panel::before{
+  content:'';
+  position:absolute;right:0;top:0;bottom:0;
+  width:1px;
+  background:linear-gradient(to bottom,transparent,var(--border-a),transparent);
+}
+
+.left-tagline{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(26px,3.5vw,40px);
+  font-weight:700;
+  line-height:1.2;
+  letter-spacing:-0.5px;
+  color:var(--t1);
+}
+.left-tagline span{
+  background:linear-gradient(90deg,var(--cyan),#a78bfa);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.left-sub{
+  font-size:15px;
+  color:var(--t2);
+  line-height:1.65;
+  max-width:360px;
+}
+
+/* AI Call Widget */
+.widget{
+  background:var(--card);
+  border:1px solid var(--border-a);
+  border-radius:var(--r-xl);
+  padding:20px;
+  max-width:380px;
+  box-shadow:var(--shadow),var(--shadow-glow);
+  position:relative;
+  overflow:hidden;
+}
+.widget::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--cyan),var(--violet));
+}
+.widget-header{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:16px;
+}
+.widget-live{
+  display:flex;align-items:center;gap:7px;
+  font-family:'Space Grotesk',sans-serif;font-weight:600;
+  font-size:11px;color:var(--cyan);letter-spacing:1px;
+}
+.live-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--cyan);
+  animation:pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.3)}}
+.widget-timer{
+  font-family:'Space Mono','Courier New',monospace;
+  font-size:12px;color:var(--t3);
+}
+.waveform{
+  display:flex;align-items:center;gap:3px;margin-right:8px;
+}
+.wbar{
+  width:3px;border-radius:2px;background:var(--cyan);
+  animation:wave 0.8s ease-in-out infinite alternate;
+}
+.wbar:nth-child(1){animation-delay:0s;height:6px}
+.wbar:nth-child(2){animation-delay:.12s;height:14px}
+.wbar:nth-child(3){animation-delay:.24s;height:10px}
+.wbar:nth-child(4){animation-delay:.36s;height:18px}
+.wbar:nth-child(5){animation-delay:.48s;height:8px}
+@keyframes wave{from{transform:scaleY(1)}to{transform:scaleY(0.3)}}
+.timer-row{display:flex;align-items:center;gap:6px}
+
+.info-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  background:rgba(255,255,255,0.025);
+  border-radius:var(--r-md);padding:14px;
+  margin-bottom:14px;
+}
+.info-cell .lbl{font-size:9px;color:var(--t3);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:3px}
+.info-cell .val{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;color:var(--t1)}
+.info-cell .val.accent{color:var(--cyan)}
+
+.transcript-box{
+  background:rgba(255,255,255,0.02);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);padding:12px 14px;
+  margin-bottom:12px;
+}
+.transcript-box .lbl{font-size:9px;color:var(--t3);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:8px}
+.t-line{
+  display:flex;align-items:flex-start;gap:8px;
+  font-size:12.5px;color:var(--t2);line-height:1.5;
+  margin-bottom:5px;
+}
+.t-line:last-child{margin-bottom:0}
+.t-line .who{
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:10px;
+  border-radius:4px;padding:1px 6px;white-space:nowrap;margin-top:2px;
+}
+.t-line.ai .who{background:rgba(0,212,255,0.12);color:var(--cyan)}
+.t-line.user .who{background:rgba(255,255,255,0.06);color:var(--t2)}
+.t-line.ai .txt{color:var(--cyan)}
+
+.widget-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:12px;border-top:1px solid var(--border);
+}
+.hot-badge{
+  background:rgba(244,63,94,0.12);border:1px solid rgba(244,63,94,0.22);
+  border-radius:var(--r-full);padding:4px 12px;
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:11px;color:#f87171;
+}
+.followup{font-size:11px;color:var(--t3)}
+
+/* Stats row */
+.stats-row{
+  display:flex;gap:12px;
+}
+.stat-pill{
+  flex:1;background:var(--elevated);border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:14px 12px;text-align:center;
+}
+.stat-num{
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;color:var(--cyan);
+}
+.stat-lbl{font-size:10px;color:var(--t3);letter-spacing:.8px;margin-top:3px;text-transform:uppercase}
+
+/* ─── RIGHT PANEL (Auth card) ─── */
+.right-panel{
+  display:flex;align-items:center;justify-content:center;
+  padding:24px 20px;min-height:100dvh;
+}
+@media(min-width:900px){.right-panel{padding:40px 48px}}
+
+.auth-card{
+  width:100%;max-width:420px;
+  background:rgba(8,12,24,0.9);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border:1px solid var(--border);
+  border-radius:var(--r-xl);
+  box-shadow:var(--shadow);
+  padding:32px 28px;
+  position:relative;overflow:hidden;
+}
+/* Top gradient line */
+.auth-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--cyan),var(--violet));
+}
+
+/* Brand mark */
+.brand{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:28px;
+}
+.brand-mark{
+  width:36px;height:36px;border-radius:10px;
+  background:linear-gradient(135deg,rgba(0,212,255,0.15),rgba(124,58,237,0.15));
+  border:1px solid var(--border-a);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;color:var(--cyan);
+}
+.brand-name{
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;color:var(--t1);
+}
+
+/* Tabs */
+.tab-row{
+  display:flex;gap:0;
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);padding:4px;
+  margin-bottom:28px;
+}
+.tab-btn{
+  flex:1;padding:9px 0;
+  border-radius:9px;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14px;
+  color:var(--t3);
+  transition:all .25s;cursor:pointer;
+  text-align:center;
+}
+.tab-btn.active{
+  background:linear-gradient(135deg,var(--cyan),var(--violet));
+  color:#fff;
+  box-shadow:0 4px 20px rgba(0,212,255,0.25);
+}
+
+/* Form */
+.form-group{margin-bottom:16px}
+.form-label{
+  display:block;
+  font-size:11px;font-weight:600;color:var(--t3);
+  letter-spacing:.8px;text-transform:uppercase;
+  margin-bottom:7px;
+}
+.input-wrap{
+  position:relative;
+  display:flex;align-items:center;
+}
+.input-icon{
+  position:absolute;left:14px;
+  display:flex;align-items:center;
+  pointer-events:none;
+}
+.form-input{
+  width:100%;height:48px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  padding:0 16px 0 44px;
+  font-size:14px;color:var(--t1);
+  transition:border-color .2s,box-shadow .2s;
+}
+.form-input::placeholder{color:var(--t3)}
+.form-input:focus{
+  border-color:var(--cyan);
+  box-shadow:0 0 0 3px rgba(0,212,255,0.10);
+  background:rgba(0,212,255,0.03);
+}
+.form-input.error{border-color:var(--rose);box-shadow:0 0 0 3px rgba(244,63,94,0.10)}
+.input-action{
+  position:absolute;right:14px;cursor:pointer;
+  color:var(--t3);transition:color .2s;
+  background:none;border:none;padding:0;display:flex;align-items:center;
+}
+.input-action:hover{color:var(--t2)}
+
+/* Forgot row */
+.forgot-row{
+  display:flex;justify-content:flex-end;margin:-6px 0 16px;
+}
+.forgot-link{
+  font-size:12px;color:var(--cyan);font-weight:500;
+  transition:opacity .2s;cursor:pointer;
+}
+.forgot-link:hover{opacity:.75}
+
+/* Primary button */
+.btn-primary{
+  width:100%;height:50px;
+  background:linear-gradient(135deg,var(--cyan),var(--violet));
+  border-radius:var(--r-md);
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;
+  color:#fff;letter-spacing:.3px;
+  border:none;cursor:pointer;
+  box-shadow:0 6px 24px rgba(0,212,255,0.25);
+  transition:opacity .2s,transform .15s,box-shadow .2s;
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.btn-primary:hover{opacity:.92;transform:translateY(-1px);box-shadow:0 10px 32px rgba(0,212,255,0.35)}
+.btn-primary:active{transform:scale(.97)}
+/* Shimmer on hover */
+.btn-primary::after{
+  content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.12),transparent);
+  transition:left .4s ease;
+}
+.btn-primary:hover::after{left:140%}
+
+/* Security note */
+.security-note{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  margin-top:10px;
+  font-size:11px;color:var(--t3);
+}
+
+/* Divider */
+.divider-row{
+  display:flex;align-items:center;gap:12px;
+  margin:20px 0;
+}
+.divider-line{flex:1;height:1px;background:var(--border)}
+.divider-text{font-size:11px;color:var(--t3);white-space:nowrap}
+
+/* Social buttons */
+.social-row{display:flex;gap:10px}
+.btn-social{
+  flex:1;height:44px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--border);
+  border-radius:var(--r-md);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:13px;font-weight:500;color:var(--t2);
+  cursor:pointer;transition:all .2s;
+}
+.btn-social:hover{border-color:var(--border-a);color:var(--t1);background:rgba(0,212,255,0.05)}
+
+/* Switch link */
+.switch-link{
+  text-align:center;margin-top:24px;
+  font-size:13px;color:var(--t3);
+}
+.switch-link a{color:var(--cyan);font-weight:600;transition:opacity .2s}
+.switch-link a:hover{opacity:.75}
+
+/* Error / success message */
+.msg{
+  border-radius:var(--r-md);padding:11px 14px;
+  font-size:13px;margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+  display:none;
+}
+.msg.error{background:rgba(244,63,94,0.08);border:1px solid rgba(244,63,94,0.2);color:#f87171}
+.msg.success{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);color:#6ee7b7}
+.msg.show{display:flex}
+
+/* ─── SIGNUP extras ─── */
+.name-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.plan-note{
+  background:rgba(0,212,255,0.05);
+  border:1px solid rgba(0,212,255,0.12);
+  border-radius:var(--r-md);padding:12px 14px;
+  margin-bottom:16px;
+  font-size:12.5px;color:var(--t2);line-height:1.5;
+}
+.plan-note strong{color:var(--cyan);font-weight:600}
+
+/* ─── LOADING SPINNER ─── */
+.spinner{
+  width:18px;height:18px;border-radius:50%;
+  border:2px solid rgba(255,255,255,0.3);
+  border-top-color:#fff;
+  animation:spin .7s linear infinite;
+  display:none;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading .spinner{display:block}
+.loading .btn-text{display:none}
+
+/* ─── MOBILE ONLY: compact left strip ─── */
+.mobile-brand{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:20px 20px 0;
+}
+@media(min-width:900px){.mobile-brand{display:none}}
+
+</style>
+</head>
+<body>
+
+<div class="bg-aurora"></div>
+<div class="bg-grid"></div>
+
+<!-- Mobile brand header -->
+<div class="mobile-brand" id="mobileBrand">
+  <div class="brand-mark">M</div>
+  <span style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;color:var(--t1)">Maxsas Realty AI</span>
+</div>
+
+<div class="page">
+
+  <!-- ══ LEFT PANEL (desktop only) ══ -->
+  <div class="left-panel" id="leftPanel">
+
+    <div>
+      <p style="font-size:11px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;font-weight:600">AI-Powered Real Estate Calling</p>
+      <h1 class="left-tagline">AI Voice Agents<br>That <span>Qualify</span><br>Real Estate Leads</h1>
+      <p class="left-sub" style="margin-top:16px">Maxsas AI calls your property leads, understands intent, and delivers only the hottest prospects to your team — automatically.</p>
+    </div>
+
+    <!-- AI Call Widget -->
+    <div class="widget" id="aiWidget">
+      <div class="widget-header">
+        <div class="widget-live">
+          <div class="live-dot"></div>
+          AI AGENT CALLING...
+        </div>
+        <div class="timer-row">
+          <div class="waveform">
+            <div class="wbar"></div><div class="wbar"></div>
+            <div class="wbar"></div><div class="wbar"></div><div class="wbar"></div>
+          </div>
+          <span class="widget-timer" id="callTimer">02:14</span>
+        </div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-cell"><div class="lbl">Lead</div><div class="val">Rahul Sharma</div></div>
+        <div class="info-cell"><div class="lbl">Budget</div><div class="val accent">₹80 Lakhs</div></div>
+        <div class="info-cell"><div class="lbl">Location</div><div class="val">Whitefield</div></div>
+        <div class="info-cell"><div class="lbl">Type</div><div class="val">3BHK</div></div>
+      </div>
+
+      <div class="transcript-box">
+        <div class="lbl">Live Transcript</div>
+        <div class="t-line ai"><span class="who">AI</span><span class="txt" id="transcript">Connecting to lead...</span></div>
+        <div class="t-line user" id="tUser" style="display:none"><span class="who">Lead</span><span id="tUserTxt"></span></div>
+      </div>
+
+      <div class="widget-footer">
+        <div class="hot-badge">🔥 Hot Lead</div>
+        <span class="followup">Follow-up in 24 hrs</span>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-pill"><div class="stat-num">&lt;600ms</div><div class="stat-lbl">Voice Latency</div></div>
+      <div class="stat-pill"><div class="stat-num">87%</div><div class="stat-lbl">Qualification</div></div>
+      <div class="stat-pill"><div class="stat-num">24/7</div><div class="stat-lbl">Active</div></div>
+    </div>
+
+  </div>
+
+  <!-- ══ RIGHT PANEL (Auth) ══ -->
+  <div class="right-panel">
+    <div class="auth-card" id="authCard">
+
+      <!-- Brand (desktop hides this, left panel handles it) -->
+      <div class="brand" style="display:none" id="cardBrand">
+        <div class="brand-mark">M</div>
+        <span class="brand-name">Maxsas Realty AI</span>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tab-row">
+        <button class="tab-btn active" id="tabLogin" onclick="switchTab('login')">Log In</button>
+        <button class="tab-btn" id="tabSignup" onclick="switchTab('signup')">Sign Up</button>
+      </div>
+
+      <!-- Message area -->
+      <div class="msg error" id="msgError">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span id="msgErrorText">Invalid credentials. Please try again.</span>
+      </div>
+      <div class="msg success" id="msgSuccess">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <span id="msgSuccessText">Account created! Redirecting...</span>
+      </div>
+
+      <!-- ──── LOGIN FORM ──── -->
+      <form id="loginForm" onsubmit="handleLogin(event)">
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <input class="form-input" type="email" id="loginEmail" placeholder="you@company.com" autocomplete="email" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <input class="form-input" type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password" required/>
+            <button type="button" class="input-action" onclick="togglePwd('loginPassword',this)" aria-label="Toggle password">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="eye-icon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="forgot-row">
+          <span class="forgot-link" onclick="showForgot()">Forgot Password?</span>
+        </div>
+
+        <button type="submit" class="btn-primary" id="loginBtn">
+          <div class="spinner"></div>
+          <span class="btn-text">Log In to Workspace</span>
+          <svg class="btn-text" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+        <div class="security-note">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Secured with end-to-end encryption
+        </div>
+
+        <div class="divider-row"><div class="divider-line"></div><span class="divider-text">or continue with</span><div class="divider-line"></div></div>
+
+        <div class="social-row">
+          <button type="button" class="btn-social" onclick="socialAuth('google')">
+            <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google
+          </button>
+          <button type="button" class="btn-social" onclick="socialAuth('linkedin')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </button>
+        </div>
+      </form>
+
+      <!-- ──── SIGNUP FORM ──── -->
+      <form id="signupForm" style="display:none" onsubmit="handleSignup(event)">
+        <div class="name-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <div class="input-wrap">
+              <span class="input-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+              <input class="form-input" type="text" placeholder="Rahul" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <div class="input-wrap">
+              <span class="input-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+              <input class="form-input" type="text" placeholder="Sharma" required/>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Work Email</label>
+          <div class="input-wrap">
+            <span class="input-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+            <input class="form-input" type="email" placeholder="you@company.com" autocomplete="email" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <div class="input-wrap">
+            <span class="input-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+            <input class="form-input" type="password" id="signupPassword" placeholder="Min. 8 characters" autocomplete="new-password" required/>
+            <button type="button" class="input-action" onclick="togglePwd('signupPassword',this)" aria-label="Toggle password">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="eye-icon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="plan-note">
+          🚀 Start free on the <strong>Lexus Plan</strong> — includes 50 AI calls/month, live call tracking, and lead qualification.
+        </div>
+
+        <button type="submit" class="btn-primary" id="signupBtn">
+          <div class="spinner"></div>
+          <span class="btn-text">Create Free Account</span>
+          <svg class="btn-text" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+        <div class="security-note">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          No credit card required
+        </div>
+
+        <div class="divider-row"><div class="divider-line"></div><span class="divider-text">or continue with</span><div class="divider-line"></div></div>
+
+        <div class="social-row">
+          <button type="button" class="btn-social" onclick="socialAuth('google')">
+            <svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84z"/></svg>
+            Google
+          </button>
+          <button type="button" class="btn-social" onclick="socialAuth('linkedin')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A66C2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </button>
+        </div>
+      </form>
+
+      <!-- Switch link -->
+      <div class="switch-link" id="switchLink">
+        Don't have an account? <a href="#" onclick="switchTab('signup');return false">Sign Up Free →</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ─── TAB SWITCH ─── */
+function switchTab(tab) {
+  const isLogin = tab === 'login';
+  document.getElementById('tabLogin').classList.toggle('active', isLogin);
+  document.getElementById('tabSignup').classList.toggle('active', !isLogin);
+  document.getElementById('loginForm').style.display = isLogin ? 'block' : 'none';
+  document.getElementById('signupForm').style.display = isLogin ? 'none' : 'block';
+  document.getElementById('switchLink').innerHTML = isLogin
+    ? 'Don\'t have an account? <a href="#" onclick="switchTab(\'signup\');return false">Sign Up Free →</a>'
+    : 'Already have an account? <a href="#" onclick="switchTab(\'login\');return false">Log In →</a>';
+  hideMessages();
+  // Animate card
+  gsap.fromTo('#authCard', { y: 8, opacity: 0.7 }, { y: 0, opacity: 1, duration: 0.35, ease: 'power3.out' });
+}
+
+/* ─── PASSWORD TOGGLE ─── */
+function togglePwd(id, btn) {
+  const input = document.getElementById(id);
+  const isHidden = input.type === 'password';
+  input.type = isHidden ? 'text' : 'password';
+  btn.querySelector('.eye-icon').style.opacity = isHidden ? '0.4' : '1';
+}
+
+/* ─── MESSAGES ─── */
+function showError(msg) {
+  document.getElementById('msgErrorText').textContent = msg;
+  document.getElementById('msgError').classList.add('show');
+  document.getElementById('msgSuccess').classList.remove('show');
+  gsap.fromTo('#msgError', { y: -6, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3 });
+}
+function showSuccess(msg) {
+  document.getElementById('msgSuccessText').textContent = msg;
+  document.getElementById('msgSuccess').classList.add('show');
+  document.getElementById('msgError').classList.remove('show');
+}
+function hideMessages() {
+  document.getElementById('msgError').classList.remove('show');
+  document.getElementById('msgSuccess').classList.remove('show');
+}
+
+/* ─── FORM HANDLERS ─── */
+function handleLogin(e) {
+  e.preventDefault();
+  const btn = document.getElementById('loginBtn');
+  btn.classList.add('loading');
+  hideMessages();
+  setTimeout(() => {
+    btn.classList.remove('loading');
+    const email = document.getElementById('loginEmail').value;
+    if (email && email.includes('@')) {
+      showSuccess('Logged in! Redirecting to workspace...');
+    } else {
+      showError('Invalid email or password. Please try again.');
+    }
+  }, 1500);
+}
+function handleSignup(e) {
+  e.preventDefault();
+  const btn = document.getElementById('signupBtn');
+  btn.classList.add('loading');
+  hideMessages();
+  const pwd = document.getElementById('signupPassword').value;
+  setTimeout(() => {
+    btn.classList.remove('loading');
+    if (pwd.length < 8) {
+      showError('Password must be at least 8 characters.');
+    } else {
+      showSuccess('Account created! Welcome to Maxsas AI 🚀');
+    }
+  }, 1600);
+}
+function handleForgot(e) {
+  e.preventDefault();
+  document.getElementById('forgotBtn').classList.add('loading');
+  setTimeout(() => {
+    document.getElementById('forgotBtn').classList.remove('loading');
+    showSuccess('Reset link sent! Check your email.');
+  }, 1200);
+}
+function showForgot() {
+  alert('Forgot password flow — wire to your /forgot-password route');
+}
+function socialAuth(provider) {
+  const btn = event.currentTarget;
+  gsap.to(btn, { scale: 0.96, duration: 0.1, yoyo: true, repeat: 1 });
+}
+
+/* ─── TRANSCRIPT ANIMATION ─── */
+const transcripts = [
+  ['AI', 'Connecting to lead...'],
+  ['AI', 'Hello, is this Rahul?'],
+  ['Lead', 'Yes, I\'m looking for 3BHK'],
+  ['AI', 'Budget around ₹80L?'],
+  ['Lead', 'Yes, preferably Whitefield'],
+  ['AI', 'Budget confirmed: ₹80L ✓'],
+  ['AI', 'Scheduling site visit...'],
+];
+let tIdx = 0;
+function nextTranscript() {
+  const [who, text] = transcripts[tIdx % transcripts.length];
+  const tEl = document.getElementById('transcript');
+  const tUser = document.getElementById('tUser');
+  const tUserTxt = document.getElementById('tUserTxt');
+  if (who === 'AI') {
+    tEl.textContent = text;
+    tUser.style.display = 'none';
+    gsap.fromTo('#transcript', { opacity: 0, x: -6 }, { opacity: 1, x: 0, duration: 0.4 });
+  } else {
+    tUserTxt.textContent = text;
+    tUser.style.display = 'flex';
+    gsap.fromTo('#tUser', { opacity: 0, x: -6 }, { opacity: 1, x: 0, duration: 0.4 });
+  }
+  tIdx++;
+}
+setInterval(nextTranscript, 2200);
+
+/* ─── CALL TIMER ─── */
+let secs = 134;
+setInterval(() => {
+  secs++;
+  const m = String(Math.floor(secs/60)).padStart(2,'0');
+  const s = String(secs%60).padStart(2,'0');
+  const el = document.getElementById('callTimer');
+  if (el) el.textContent = `${m}:${s}`;
+}, 1000);
+
+/* ─── GSAP ENTRANCE ─── */
+window.addEventListener('DOMContentLoaded', () => {
+  // Stagger entrance
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  tl.from('#mobileBrand', { y: -20, opacity: 0, duration: 0.5 }, 0);
+  tl.from('#leftPanel > *', { y: 40, opacity: 0, duration: 0.6, stagger: 0.12 }, 0.1);
+  tl.from('#authCard', { y: 50, opacity: 0, duration: 0.65, scale: 0.97 }, 0.15);
+  tl.from('.tab-btn', { y: 10, opacity: 0, duration: 0.4, stagger: 0.07 }, 0.5);
+  tl.from('.form-group', { y: 12, opacity: 0, duration: 0.35, stagger: 0.06 }, 0.55);
+  tl.from('.btn-primary', { y: 12, opacity: 0, duration: 0.4, scale: 0.97 }, 0.8);
+
+  // Subtle widget glow pulse
+  gsap.to('#aiWidget', {
+    boxShadow: '0 4px 32px rgba(0,0,0,0.5), 0 0 60px rgba(0,212,255,0.22)',
+    duration: 2.5, yoyo: true, repeat: -1, ease: 'sine.inOut'
+  });
+
+  // Input focus highlight
+  document.querySelectorAll('.form-input').forEach(input => {
+    input.addEventListener('focus', e => {
+      gsap.to(e.target.closest('.input-wrap'), { scale: 1.008, duration: 0.2 });
+    });
+    input.addEventListener('blur', e => {
+      gsap.to(e.target.closest('.input-wrap'), { scale: 1, duration: 0.2 });
+    });
+  });
+});
+</script>
+</body>
+</html>

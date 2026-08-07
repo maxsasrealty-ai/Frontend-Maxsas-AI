@@ -1,0 +1,98 @@
+09:48:51.160 Running build in Washington, D.C., USA (East) – iad1
+09:48:51.160 Build machine configuration: 2 cores, 8 GB
+09:48:51.369 Cloning github.com/maxsasrealty-ai/Maxsas-AI-Livekit (Branch: main, Commit: 02dd9f5)
+09:48:52.029 Cloning completed: 660.000ms
+09:48:52.825 Restored build cache from previous deployment (9RVGgJNv5ykgZv2fvqfLNdkuPHK2)
+09:48:53.034 Running "vercel build"
+09:48:53.453 Vercel CLI 53.3.2
+09:48:53.945 Installing dependencies...
+09:48:55.823 
+09:48:55.823 up to date in 2s
+09:48:55.824 
+09:48:55.824 216 packages are looking for funding
+09:48:55.824   run `npm fund` for details
+09:48:55.953 
+09:48:55.953 > maxsas-ai-livekit@1.0.0 web:build
+09:48:55.953 > expo export --platform web
+09:48:55.953 
+09:48:56.336 env: load .env
+09:48:56.728 env: export EXPO_PUBLIC_API_BASE_URL EXPO_PUBLIC_VOICE_API_BASE_URL
+09:48:56.728 React Compiler enabled
+09:48:57.050 Starting Metro Bundler
+09:48:57.113 Static rendering is enabled. Learn more: https://docs.expo.dev/router/reference/static-rendering/
+09:49:00.620 Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5% (15/41)
+09:49:00.620 λ node_modules/expo-router/node/render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+09:49:04.184 Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5% ( 95/288)
+09:49:04.185 λ node_modules/expo-router/node/render.js ▓░░░░░░░░░░░░░░░ 10.0% ( 19/124)
+09:49:07.717 Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5% ( 95/288)
+09:49:07.717 λ node_modules/expo-router/node/render.js ▓▓░░░░░░░░░░░░░░ 17.9% (117/336)
+09:49:11.307 Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5% (118/312)
+09:49:11.308 λ node_modules/expo-router/node/render.js ▓▓░░░░░░░░░░░░░░ 17.9% (123/346)
+09:49:14.957 Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5% (132/317)
+09:49:14.958 λ node_modules/expo-router/node/render.js ▓▓░░░░░░░░░░░░░░ 17.9% (123/346)
+09:49:18.505 Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5% (188/391)
+09:49:18.506 λ node_modules/expo-router/node/render.js ▓▓░░░░░░░░░░░░░░ 17.9% (123/346)
+09:49:22.075 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓░░░░░░░░░░ 38.5% (283/456)
+09:49:22.076 λ node_modules/expo-router/node/render.js ▓▓▓░░░░░░░░░░░░░ 20.9% (176/385)
+09:49:25.699 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓░░░░░░░░░░ 38.5% (283/456)
+09:49:25.701 λ node_modules/expo-router/node/render.js ▓▓▓▓░░░░░░░░░░░░ 29.6% (246/452)
+09:49:29.242 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓░░░░░░░░░░ 40.7% (305/478)
+09:49:29.243 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓░░░░░░░░░░ 41.0% (338/528)
+09:49:34.418 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 54.6% (413/559)
+09:49:34.418 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓░░░░░░░░░░ 41.0% (338/528)
+09:49:38.548 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 59.0% (457/595)
+09:49:38.549 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓░░░░░░░░░░ 42.5% (346/531)
+09:49:42.082 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 59.0% (457/595)
+09:49:42.083 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 69.4% (520/625)
+09:49:46.578 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 61.8% (470/598)
+09:49:46.579 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 69.6% (523/627)
+09:49:50.141 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 61.8% ( 583/2436)
+09:49:50.142 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 73.4% (555/648)
+09:49:53.893 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 61.8% ( 583/2436)
+09:49:53.894 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 75.4% (567/653)
+09:49:57.667 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 61.8% ( 591/2440)
+09:49:57.668 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 75.4% (618/744)
+09:50:01.186 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 61.8% ( 965/2440)
+09:50:01.187 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 75.4% (618/744)
+09:50:04.709 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 61.8% (1342/2440)
+09:50:04.710 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 75.4% (618/744)
+09:50:08.258 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 61.8% (1690/2440)
+09:50:08.259 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 75.4% (618/744)
+09:50:11.818 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 72.9% (2084/2440)
+09:50:11.818 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 75.4% (618/744)
+09:50:15.392 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 90.8% (2365/2509)
+09:50:15.393 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 75.4% (618/744)
+09:50:19.008 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 91.2% (2438/2553)
+09:50:19.009 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 77.7% (730/849)
+09:50:22.568 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 92.0% (2530/2637)
+09:50:22.568 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 77.7% (783/898)
+09:50:26.133 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 93.2% (2597/2690)
+09:50:26.134 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 78.0% (837/948)
+09:50:29.707 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.2% (2628/2693)
+09:50:29.707 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 84.6% (908/987)
+09:50:33.265 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 96.8% (2689/2757)
+09:50:33.266 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 91.8% ( 975/1027)
+09:50:36.829 Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.1% (2833/2860)
+09:50:36.830 λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.1% (1102/1142)
+09:50:38.014 Web Bundling failed 98438ms node_modules/expo-router/entry.js (2877 modules)
+09:50:38.016 Error: Unable to resolve module ../../../components/lexus/animations from /vercel/path0/app/(protected)/lexus/index.tsx: 
+09:50:38.016 
+09:50:38.017 None of these files exist:
+09:50:38.017   * components/lexus/animations(.web.ts|.ts|.web.tsx|.tsx|.web.mjs|.mjs|.web.js|.js|.web.jsx|.jsx|.web.json|.json|.web.cjs|.cjs|.web.scss|.scss|.web.sass|.sass|.web.css|.css)
+09:50:38.017   * components/lexus/animations
+09:50:38.017   3 | import { SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+09:50:38.017   4 |
+09:50:38.017 > 5 | import { useGsapReveal } from "../../../components/lexus/animations";
+09:50:38.017     |                                ^
+09:50:38.017   6 | import { InsightCharts } from "../../../components/lexus/charts";
+09:50:38.018   7 | import GlassCard from "../../../components/lexus/GlassCard";
+09:50:38.018   8 | import PillButton from "../../../components/lexus/PillButton";
+09:50:38.018 
+09:50:38.018 Import stack:
+09:50:38.018 
+09:50:38.018  app/(protected)/lexus/index.tsx
+09:50:38.018  | import "../../../components/lexus/animations"
+09:50:38.018 
+09:50:38.018  app (require.context)
+09:50:38.019 
+09:50:38.113 Error: Command "npm run web:build" exited with 1

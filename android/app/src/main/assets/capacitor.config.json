@@ -1,0 +1,6 @@
+{
+	"appId": "com.maxsas.ai.livekit",
+	"appName": "Maxsas-AI-Livekit",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,10 @@
+backend/
+android/
+ios/
+node_modules/
+.git/
+*.log
+*.env
+**/dist/
+**/build/
+**/gradle/
