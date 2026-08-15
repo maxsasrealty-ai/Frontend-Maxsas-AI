@@ -23,6 +23,7 @@ import {
   Zap,
   type LucideIcon,
 } from 'lucide-react';
+import { resolveApiBaseUrl } from '../../lib/api/base-url';
 
 const LOGO_IMG = require('../../assets/images/maxsas-logo.png');
 const FOUNDER_IMG = '/anubhav.png';
@@ -68,6 +69,60 @@ type Testimonial = {
   name: string;
   role: string;
 };
+
+type WebinarConfig = {
+  title: string;
+  subTitle: string;
+  eventDate: string;
+  eventTime: string;
+  hostName: string;
+  ticketPrice: number;
+  zoomLink: string;
+  whatsappGroupLink: string;
+  status: 'OPEN' | 'SEATS_FULL' | 'COMPLETED';
+  updatedAt?: string;
+};
+
+const DEFAULT_WEBINAR_CONFIG: WebinarConfig = {
+  title: 'Maxsas AI Voice Agent Workshop',
+  subTitle: 'Live workshop on AI voice agents for real estate teams',
+  eventDate: '2026-08-25T16:00:00+05:30',
+  eventTime: '4:00 PM IST',
+  hostName: 'Anubhav Chaudhary',
+  ticketPrice: 19900,
+  zoomLink: '',
+  whatsappGroupLink: '',
+  status: 'OPEN',
+};
+
+function formatRupees(paise: number) {
+  return `₹${Math.max(0, Math.round(paise / 100)).toLocaleString('en-IN')}`;
+}
+
+function formatPublicDate(value: string) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return 'TBA';
+  }
+
+  return new Intl.DateTimeFormat('en-IN', {
+    weekday: 'short',
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  }).format(date);
+}
+
+function buildFaqs(ticketPrice: number): FaqItem[] {
+  const formattedPrice = formatRupees(ticketPrice);
+  return [
+    { q: 'Is this just a sales pitch?', a: 'No. The session is practical, with a live product demo and a walkthrough of the workflow.' },
+    { q: 'Do I need technical knowledge?', a: 'No. The workshop is built for founders, sales leaders, and operations teams.' },
+    { q: 'Will I get a recording?', a: 'Yes. Every registrant receives the recording and the workshop resources.' },
+    { q: 'How much does it cost?', a: `The workshop is ${formattedPrice}, discounted from ₹1,099, and includes the live session plus the recording.` },
+    { q: 'Who should attend?', a: 'Teams handling 500+ leads a day and looking to reduce response time and manual follow-up.' },
+  ];
+}
 
 function useCountdown(target: string) {
   const [left, setLeft] = useState('--d --h --m --s');
@@ -289,20 +344,61 @@ const TESTIMONIALS: Testimonial[] = [
   { quote: 'CRM entries used to be a week behind reality. Now every call updates our pipeline instantly.', name: 'Karan Deshpande', role: 'Founder, Deshpande Channel Partners' },
 ];
 
-const FAQS: FaqItem[] = [
-  { q: 'Is this just a sales pitch?', a: 'No. The session is practical, with a live product demo and a walkthrough of the workflow.' },
-  { q: 'Do I need technical knowledge?', a: 'No. The workshop is built for founders, sales leaders, and operations teams.' },
-  { q: 'Will I get a recording?', a: 'Yes. Every registrant receives the recording and the workshop resources.' },
-  { q: 'How much does it cost?', a: 'The workshop is ₹199, discounted from ₹1,099, and includes the live session plus the recording.' },
-  { q: 'Who should attend?', a: 'Teams handling 500+ leads a day and looking to reduce response time and manual follow-up.' },
-];
-
 export default function WebinarLandingScreen() {
   const [mobileNav, setMobileNav] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showSticky, setShowSticky] = useState(false);
+  const [webinarConfig, setWebinarConfig] = useState<WebinarConfig>(DEFAULT_WEBINAR_CONFIG);
+  const [configLoading, setConfigLoading] = useState(true);
+  const [configError, setConfigError] = useState('');
   const registerRef = useRef<HTMLDivElement | null>(null);
-  const countdown = useCountdown('2026-08-25T16:00:00+05:30');
+  const apiBaseUrl = resolveApiBaseUrl();
+  const countdown = useCountdown(webinarConfig.eventDate);
+  const ticketPriceRupees = Math.max(0, Math.round(webinarConfig.ticketPrice / 100));
+  const registrationClosed = webinarConfig.status === 'SEATS_FULL' || webinarConfig.status === 'COMPLETED';
+  const ticketPriceLabel = `₹${ticketPriceRupees.toLocaleString('en-IN')}`;
+  const ctaLabel = registrationClosed ? 'Registration Closed / Seats Full' : `Reserve My Seat — ${ticketPriceLabel}`;
+  const statusLabel = webinarConfig.status === 'OPEN'
+    ? 'Registrations Open'
+    : webinarConfig.status === 'SEATS_FULL'
+      ? 'Seats Full'
+      : 'Event Completed';
+  const faqs = buildFaqs(webinarConfig.ticketPrice);
+
+  useEffect(() => {
+    let active = true;
+
+    async function loadWebinarConfig() {
+      setConfigLoading(true);
+      setConfigError('');
+
+      try {
+        const response = await fetch(`${apiBaseUrl}/webinar/config`);
+        const payload = await response.json();
+        if (!response.ok || payload?.success === false) {
+          throw new Error(payload?.error?.message || `Request failed: ${response.status}`);
+        }
+
+        if (active && payload?.data) {
+          setWebinarConfig({ ...DEFAULT_WEBINAR_CONFIG, ...payload.data });
+        }
+      } catch (error: any) {
+        if (active) {
+          setConfigError(error?.message || 'Failed to load webinar config');
+        }
+      } finally {
+        if (active) {
+          setConfigLoading(false);
+        }
+      }
+    }
+
+    void loadWebinarConfig();
+
+    return () => {
+      active = false;
+    };
+  }, [apiBaseUrl]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -407,7 +503,7 @@ export default function WebinarLandingScreen() {
             <a href="#faq" style={{ color: c.muted, textDecoration: 'none' }}>FAQ</a>
           </nav>
           <a href="#register" className="desktop-cta" style={{ display: 'none', alignItems: 'center', gap: 8, background: c.blue, color: '#fff', padding: '10px 16px', borderRadius: 999, fontSize: 14, fontWeight: 600, textDecoration: 'none' }}>
-            Reserve My Seat — ₹199
+            {ctaLabel}
           </a>
           <button className="hamburger-btn" onClick={() => setMobileNav((value) => !value)} aria-label="Toggle menu" style={{ display: 'flex', border: 'none', background: 'transparent', color: c.text, cursor: 'pointer' }}>
             {mobileNav ? <X size={22} /> : <Menu size={22} />}
@@ -420,7 +516,7 @@ export default function WebinarLandingScreen() {
             <a href="#speaker" onClick={() => setMobileNav(false)} style={{ color: c.muted, textDecoration: 'none' }}>Speaker</a>
             <a href="#faq" onClick={() => setMobileNav(false)} style={{ color: c.muted, textDecoration: 'none' }}>FAQ</a>
             <a href="#register" onClick={() => setMobileNav(false)} style={{ background: c.blue, color: '#fff', textDecoration: 'none', textAlign: 'center', padding: '10px 14px', borderRadius: 999 }}>
-              Reserve My Seat — ₹199
+              {ctaLabel}
             </a>
           </div>
         )}
@@ -434,7 +530,7 @@ export default function WebinarLandingScreen() {
             <Reveal>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 999, padding: '8px 12px', border: `1px solid ${c.line}`, background: `${c.surface}CC`, color: c.ice, fontSize: 12, ...mono }}>
                 <span style={{ width: 8, height: 8, borderRadius: 999, background: c.amber }} />
-                LIVE WORKSHOP · LIMITED TO 100 SEATS · ₹199 ONLY
+                {statusLabel} · LIMITED TO 100 SEATS · {ticketPriceLabel} ONLY
               </div>
               <h1 style={{ ...display, fontWeight: 600, lineHeight: 1.08, fontSize: 'clamp(2.2rem, 4vw, 3.8rem)', marginTop: 18 }}>
                 Your leads are going cold<br />while your team is still <span style={{ color: c.blueLight }}>dialing.</span>
@@ -442,21 +538,26 @@ export default function WebinarLandingScreen() {
               <p style={{ marginTop: 18, fontSize: 16, lineHeight: 1.7, color: c.muted, maxWidth: 620 }}>
                 See how real estate builders, brokerages, and channel partners use AI Voice Agents to call every lead in under 60 seconds and hand only qualified buyers to the closing team.
               </p>
+              {configLoading ? (
+                <p style={{ marginTop: 10, fontSize: 12, color: c.ice, ...mono }}>Loading live webinar details…</p>
+              ) : configError ? (
+                <p style={{ marginTop: 10, fontSize: 12, color: c.amber, ...mono }}>{configError}</p>
+              ) : null}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 24 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, borderRadius: 14, padding: '10px 14px', border: `1px solid ${c.line}`, background: c.surface }}>
                   <CalendarClock size={17} style={{ color: c.ice }} />
-                  <span style={{ fontSize: 13, ...mono }}>Thu, 25 Aug 2026</span>
+                  <span style={{ fontSize: 13, ...mono }}>{formatPublicDate(webinarConfig.eventDate)}</span>
                 </div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, borderRadius: 14, padding: '10px 14px', border: `1px solid ${c.line}`, background: c.surface }}>
                   <Clock size={17} style={{ color: c.ice }} />
-                  <span style={{ fontSize: 13, ...mono }}>4:00 PM IST · Live on Zoom</span>
+                  <span style={{ fontSize: 13, ...mono }}>{webinarConfig.eventTime} · Live on Zoom</span>
                 </div>
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14, marginTop: 24 }}>
                 <a href="#register" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: c.blue, color: '#fff', padding: '14px 22px', borderRadius: 999, fontWeight: 700, textDecoration: 'none', boxShadow: `0 10px 30px -8px ${c.blue}99` }}>
-                  Reserve My Seat — ₹199 <ArrowRight size={16} />
+                  {ctaLabel} <ArrowRight size={16} />
                 </a>
-                <span style={{ fontSize: 12, color: c.muted, ...mono }}>₹199 only (worth ₹1,099) · Recording included</span>
+                <span style={{ fontSize: 12, color: c.muted, ...mono }}>{ticketPriceLabel} only (worth ₹1,099) · Recording included</span>
               </div>
             </Reveal>
 
@@ -464,10 +565,10 @@ export default function WebinarLandingScreen() {
             <Reveal delay={150}>
               <div style={{ position: 'relative' }}>
                 <div className="founder-img-wrapper">
-                  <img src={FOUNDER_IMG} alt="Anubhav Chaudhary" className="founder-img" />
+                  <img src={FOUNDER_IMG} alt={webinarConfig.hostName} className="founder-img" />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(6, 8, 15, 0.95) 5%, rgba(0,0,0,0.1) 60%)' }} />
                   <div style={{ position: 'absolute', left: 20, bottom: 20, zIndex: 2 }}>
-                    <p style={{ ...display, fontWeight: 600, fontSize: 16, color: c.text }}>Anubhav Chaudhary</p>
+                    <p style={{ ...display, fontWeight: 600, fontSize: 16, color: c.text }}>{webinarConfig.hostName}</p>
                     <p style={{ fontSize: 12, color: c.ice, ...mono }}>Founder &amp; CEO, Maxsas AI</p>
                   </div>
                 </div>
@@ -609,10 +710,10 @@ export default function WebinarLandingScreen() {
         <Reveal delay={100}>
           <div className="speaker-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 32, marginTop: 20, borderRadius: 28, padding: '24px 28px', border: `1px solid ${c.line}`, background: c.surface, alignItems: 'center' }}>
             <div className="founder-img-wrapper" style={{ margin: 0 }}>
-              <img src={FOUNDER_IMG} alt="Anubhav Chaudhary" className="founder-img" />
+              <img src={FOUNDER_IMG} alt={webinarConfig.hostName} className="founder-img" />
             </div>
             <div>
-              <h3 style={{ ...display, fontWeight: 600, fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}>Anubhav Chaudhary</h3>
+              <h3 style={{ ...display, fontWeight: 600, fontSize: 'clamp(1.5rem, 2.5vw, 2rem)' }}>{webinarConfig.hostName}</h3>
               <p style={{ fontSize: 13, marginTop: 4, color: c.ice, ...mono }}>Founder &amp; CEO, Maxsas AI</p>
               <p style={{ marginTop: 16, lineHeight: 1.7, color: c.muted }}>
                 Anubhav founded Maxsas AI to close the gap between how fast real estate leads arrive and how slowly they typically get worked. He leads product and voice-AI strategy at Maxsas and runs this workshop personally.
@@ -651,7 +752,7 @@ export default function WebinarLandingScreen() {
           <h2 style={{ ...display, fontWeight: 600, fontSize: 'clamp(1.8rem, 3vw, 2.7rem)', lineHeight: 1.2, marginTop: 12, maxWidth: 700 }}>Questions you might have</h2>
         </Reveal>
         <div style={{ maxWidth: 760, marginTop: 28, display: 'flex', flexDirection: 'column', gap: 12 }}>
-          {FAQS.map((item, index) => {
+          {faqs.map((item, index) => {
             const open = openFaq === index;
             return (
               <Reveal key={item.q} delay={index * 40}>
@@ -688,7 +789,7 @@ export default function WebinarLandingScreen() {
                 </div>
                 <div>
                   <p style={{ fontSize: 12, textTransform: 'uppercase', letterSpacing: '0.2em', color: c.muted }}>Workshop fee</p>
-                  <p style={{ ...display, fontWeight: 600, fontSize: 24 }}>₹199 <span style={{ color: c.muted, textDecoration: 'line-through', fontSize: 16, fontWeight: 400 }}>₹1,099</span></p>
+                  <p style={{ ...display, fontWeight: 600, fontSize: 24 }}>{ticketPriceLabel} <span style={{ color: c.muted, textDecoration: 'line-through', fontSize: 16, fontWeight: 400 }}>₹1,099</span></p>
                   <p style={{ fontSize: 12, color: c.ice, ...mono }}>One-time · Recording &amp; resources included</p>
                 </div>
               </div>
@@ -733,7 +834,7 @@ export default function WebinarLandingScreen() {
                       <input name={field.name} required type={field.type} placeholder={field.placeholder} style={{ padding: '12px 14px', borderRadius: 12, border: `1px solid ${c.line}`, background: c.surface, color: c.text, outline: 'none' }} />
                     </label>
                   ))}
-                  <button type="submit" style={{ marginTop: 6, padding: '14px 16px', borderRadius: 12, border: 'none', background: c.blue, color: '#fff', fontWeight: 700, cursor: 'pointer', fontSize: 15 }}>Reserve My Seat — ₹199</button>
+                  <button type="submit" style={{ marginTop: 6, padding: '14px 16px', borderRadius: 12, border: 'none', background: c.blue, color: '#fff', fontWeight: 700, cursor: 'pointer', fontSize: 15 }}>{ctaLabel}</button>
                 </form>
               </div>
             </Reveal>
@@ -744,7 +845,7 @@ export default function WebinarLandingScreen() {
       {/* Sticky Mobile Registration CTA */}
       <div style={{ position: 'fixed', right: 20, bottom: 20, zIndex: 60, transform: showSticky ? 'translateY(0px)' : 'translateY(140%)', transition: 'transform 0.3s ease' }}>
         <a href="#register" style={{ display: 'inline-flex', padding: '12px 20px', borderRadius: 999, background: c.blue, color: '#fff', textDecoration: 'none', fontWeight: 700, fontSize: 14, boxShadow: `0 10px 30px -8px ${c.blue}CC` }}>
-          Reserve My Seat — ₹199
+          {ctaLabel}
         </a>
       </div>
     </div>

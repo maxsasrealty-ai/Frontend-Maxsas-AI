@@ -11,12 +11,40 @@ type WebinarRegisterParams = {
   company?: string | string[];
 };
 
+type WebinarConfig = {
+  title: string;
+  subTitle: string;
+  eventDate: string;
+  eventTime: string;
+  hostName: string;
+  ticketPrice: number;
+  zoomLink: string;
+  whatsappGroupLink: string;
+  status: 'OPEN' | 'SEATS_FULL' | 'COMPLETED';
+};
+
+const DEFAULT_WEBINAR_CONFIG: WebinarConfig = {
+  title: 'Maxsas AI Voice Agent Workshop',
+  subTitle: 'Live workshop on AI voice agents for real estate teams',
+  eventDate: '2026-08-25T16:00:00+05:30',
+  eventTime: '4:00 PM IST',
+  hostName: 'Anubhav Chaudhary',
+  ticketPrice: 19900,
+  zoomLink: '',
+  whatsappGroupLink: '',
+  status: 'OPEN',
+};
+
 function firstValue(value: string | string[] | undefined): string {
   if (Array.isArray(value)) {
     return value[0] || '';
   }
 
   return value || '';
+}
+
+function formatRupees(paise: number): string {
+  return `₹${Math.max(0, Math.round(paise / 100)).toLocaleString('en-IN')}`;
 }
 
 export default function WebinarRegisterScreen() {
@@ -28,8 +56,12 @@ export default function WebinarRegisterScreen() {
     email: firstValue(params.email),
     company: firstValue(params.company),
   });
+  const [webinarConfig, setWebinarConfig] = useState<WebinarConfig>(DEFAULT_WEBINAR_CONFIG);
+  const [configLoading, setConfigLoading] = useState(true);
   const [loading, setLoading] = useState(false);
   const [razorpayReady, setRazorpayReady] = useState(false);
+  const registrationClosed = webinarConfig.status === 'SEATS_FULL' || webinarConfig.status === 'COMPLETED';
+  const ticketPriceLabel = formatRupees(webinarConfig.ticketPrice);
 
   useEffect(() => {
     if (Platform.OS !== 'web') {
@@ -56,6 +88,41 @@ export default function WebinarRegisterScreen() {
     };
   }, []);
 
+  useEffect(() => {
+    let active = true;
+
+    async function loadWebinarConfig() {
+      setConfigLoading(true);
+
+      try {
+        const response = await fetch(`${apiBaseUrl}/webinar/config`);
+        const payload = await response.json();
+
+        if (!response.ok || payload?.success === false) {
+          throw new Error(payload?.error?.message || 'Failed to load webinar config');
+        }
+
+        if (active && payload?.data) {
+          setWebinarConfig({ ...DEFAULT_WEBINAR_CONFIG, ...payload.data });
+        }
+      } catch {
+        if (active) {
+          setWebinarConfig(DEFAULT_WEBINAR_CONFIG);
+        }
+      } finally {
+        if (active) {
+          setConfigLoading(false);
+        }
+      }
+    }
+
+    void loadWebinarConfig();
+
+    return () => {
+      active = false;
+    };
+  }, [apiBaseUrl]);
+
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
@@ -63,6 +130,11 @@ export default function WebinarRegisterScreen() {
   const handleProceedToPay = async () => {
     if (!formData.fullName || !formData.phone || !formData.email) {
       Alert.alert('Required Fields', 'Please fill in Name, Phone, and Email.');
+      return;
+    }
+
+    if (registrationClosed) {
+      Alert.alert('Registration Closed', 'Seats are currently full or the event has completed.');
       return;
     }
 
@@ -147,8 +219,15 @@ export default function WebinarRegisterScreen() {
       </TouchableOpacity>
 
       <View style={styles.card}>
+        <View style={styles.badgeRow}>
+          <View style={[styles.statusBadge, registrationClosed ? styles.statusBadgeClosed : styles.statusBadgeOpen]}>
+            <Text style={styles.statusBadgeText}>{registrationClosed ? 'Registration Closed / Seats Full' : 'Registrations Open'}</Text>
+          </View>
+        </View>
         <Text style={styles.title}>Reserve Your Seat</Text>
-        <Text style={styles.subtitle}>Fill in your details to proceed to secure ₹199 payment.</Text>
+        <Text style={styles.subtitle}>
+          {configLoading ? 'Loading live webinar details...' : `Fill in your details to proceed to secure ${ticketPriceLabel} payment.`}
+        </Text>
 
         <View style={styles.inputGroup}>
           <Text style={styles.label}>Full Name *</Text>
@@ -196,11 +275,22 @@ export default function WebinarRegisterScreen() {
           />
         </View>
 
-        <TouchableOpacity style={styles.payBtn} onPress={handleProceedToPay} disabled={loading}>
+        <View style={styles.eventMeta}>
+          <View style={styles.metaRow}>
+            <Feather name="calendar" size={16} color="#8FB8FF" />
+            <Text style={styles.metaText}>{webinarConfig.eventDate ? new Date(webinarConfig.eventDate).toLocaleDateString('en-IN', { weekday: 'long', day: '2-digit', month: 'short', year: 'numeric' }) : 'TBA'} · {webinarConfig.eventTime}</Text>
+          </View>
+          <View style={styles.metaRow}>
+            <Feather name="user" size={16} color="#8FB8FF" />
+            <Text style={styles.metaText}>Host: {webinarConfig.hostName}</Text>
+          </View>
+        </View>
+
+        <TouchableOpacity style={[styles.payBtn, registrationClosed && styles.payBtnDisabled]} onPress={handleProceedToPay} disabled={loading || registrationClosed}>
           {loading ? (
             <ActivityIndicator color="#FFFFFF" />
           ) : (
-            <Text style={styles.payBtnText}>Proceed to Pay ₹199</Text>
+            <Text style={styles.payBtnText}>{registrationClosed ? 'Registration Closed / Seats Full' : `Proceed to Pay ${ticketPriceLabel}`}</Text>
           )}
         </TouchableOpacity>
       </View>
@@ -214,11 +304,20 @@ const styles = StyleSheet.create({
   backBtn: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 24 },
   backBtnText: { color: '#8FB8FF', fontSize: 14, fontWeight: '600' },
   card: { backgroundColor: '#0E1220', borderRadius: 20, borderWidth: 1, borderColor: '#232A44', padding: 24, gap: 16 },
+  badgeRow: { flexDirection: 'row', justifyContent: 'flex-start' },
+  statusBadge: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 999 },
+  statusBadgeOpen: { backgroundColor: 'rgba(59, 111, 255, 0.18)' },
+  statusBadgeClosed: { backgroundColor: 'rgba(239, 68, 68, 0.18)' },
+  statusBadgeText: { color: '#F4F6FB', fontSize: 11, fontWeight: '700' },
   title: { color: '#F4F6FB', fontSize: 24, fontWeight: '700' },
   subtitle: { color: '#8D96B3', fontSize: 14, marginBottom: 8 },
   inputGroup: { gap: 6 },
   label: { color: '#8FB8FF', fontSize: 12, fontWeight: '600' },
   input: { backgroundColor: '#161B2E', borderWidth: 1, borderColor: '#232A44', borderRadius: 12, paddingHorizontal: 16, paddingVertical: 12, color: '#F4F6FB', fontSize: 14 },
   payBtn: { backgroundColor: '#3B6FFF', borderRadius: 12, paddingVertical: 16, alignItems: 'center', marginTop: 12 },
+  payBtnDisabled: { backgroundColor: '#334155' },
   payBtnText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700' },
+  eventMeta: { gap: 10, paddingTop: 4 },
+  metaRow: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  metaText: { color: '#F4F6FB', fontSize: 13, fontWeight: '500' },
 });

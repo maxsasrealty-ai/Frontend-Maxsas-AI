@@ -1,14 +1,68 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Linking, Alert } from 'react-native';
 import { router } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
+import { resolveApiBaseUrl } from '../../lib/api/base-url';
+
+type WebinarConfig = {
+  title: string;
+  subTitle: string;
+  eventDate: string;
+  eventTime: string;
+  hostName: string;
+  ticketPrice: number;
+  zoomLink: string;
+  whatsappGroupLink: string;
+  status: 'OPEN' | 'SEATS_FULL' | 'COMPLETED';
+};
+
+const DEFAULT_WEBINAR_CONFIG: WebinarConfig = {
+  title: 'Maxsas AI Voice Agent Workshop',
+  subTitle: 'Live workshop on AI voice agents for real estate teams',
+  eventDate: '2026-08-25T16:00:00+05:30',
+  eventTime: '4:00 PM IST',
+  hostName: 'Anubhav Chaudhary',
+  ticketPrice: 19900,
+  zoomLink: '',
+  whatsappGroupLink: '',
+  status: 'OPEN',
+};
 
 export default function WebinarThankYouScreen() {
-  const ZOOM_WEBINAR_LINK = process.env.EXPO_PUBLIC_ZOOM_WEBINAR_LINK?.trim() || '';
-  const WHATSAPP_GROUP_LINK = process.env.EXPO_PUBLIC_WHATSAPP_GROUP_LINK?.trim() || '';
-  
-  // Google Calendar Event Link
-  const GOOGLE_CALENDAR_LINK = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=Maxsas+AI+Voice+Agent+Workshop&dates=20260825T103000Z/20260825T120000Z&details=Live+Webinar+on+AI+Voice+Agents+for+Real+Estate.&location=Zoom`;
+  const apiBaseUrl = resolveApiBaseUrl();
+  const [webinarConfig, setWebinarConfig] = useState<WebinarConfig>(DEFAULT_WEBINAR_CONFIG);
+
+  useEffect(() => {
+    let active = true;
+
+    async function loadWebinarConfig() {
+      try {
+        const response = await fetch(`${apiBaseUrl}/webinar/config`);
+        const payload = await response.json();
+        if (!response.ok || payload?.success === false) {
+          throw new Error(payload?.error?.message || 'Failed to load webinar config');
+        }
+
+        if (active && payload?.data) {
+          setWebinarConfig({ ...DEFAULT_WEBINAR_CONFIG, ...payload.data });
+        }
+      } catch {
+        if (active) {
+          setWebinarConfig(DEFAULT_WEBINAR_CONFIG);
+        }
+      }
+    }
+
+    void loadWebinarConfig();
+
+    return () => {
+      active = false;
+    };
+  }, [apiBaseUrl]);
+
+  const ZOOM_WEBINAR_LINK = webinarConfig.zoomLink?.trim() || '';
+  const WHATSAPP_GROUP_LINK = webinarConfig.whatsappGroupLink?.trim() || '';
+  const GOOGLE_CALENDAR_LINK = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(webinarConfig.title)}&dates=20260825T103000Z/20260825T120000Z&details=${encodeURIComponent(webinarConfig.subTitle)}&location=Zoom`;
 
   const openLink = (url: string) => {
     if (!url) {
@@ -57,11 +111,11 @@ export default function WebinarThankYouScreen() {
         <View style={styles.infoBox}>
           <View style={styles.infoRow}>
             <Feather name="clock" size={16} color="#8FB8FF" />
-            <Text style={styles.infoText}>Thursday, 25 Aug 2026 · 4:00 PM IST</Text>
+            <Text style={styles.infoText}>{new Date(webinarConfig.eventDate).toLocaleDateString('en-IN', { weekday: 'long', day: '2-digit', month: 'short', year: 'numeric' })} · {webinarConfig.eventTime}</Text>
           </View>
           <View style={styles.infoRow}>
             <Feather name="user" size={16} color="#8FB8FF" />
-            <Text style={styles.infoText}>Host: Anubhav Chaudhary (Maxsas AI)</Text>
+            <Text style={styles.infoText}>Host: {webinarConfig.hostName} (Maxsas AI)</Text>
           </View>
         </View>
 
