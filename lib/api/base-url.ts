@@ -1,26 +1,17 @@
-export function resolveApiBaseUrl(fallback = "http://localhost:4000/api"): string {
+const LOCAL_API_BASE_URL = "http://localhost:4000/api";
+const DEPLOYED_API_BASE_URL = "https://backend-maxsas-ai.onrender.com/api";
+
+export function resolveApiBaseUrl(fallback = __DEV__ ? LOCAL_API_BASE_URL : DEPLOYED_API_BASE_URL): string {
 	const configured = process.env.EXPO_PUBLIC_API_BASE_URL?.trim();
-	const hasBrowserOrigin = typeof window !== "undefined" && Boolean(window.location?.origin);
-	const sameOriginApiBase = hasBrowserOrigin
-		? `${window.location.origin.replace(/\/$/, "")}/api`
-		: "";
 
 	if (configured) {
-		if (!__DEV__ && configured.startsWith("http://") && hasBrowserOrigin) {
-			return sameOriginApiBase;
-		}
-
 		return configured.replace(/\/$/, "");
 	}
 
-	if (__DEV__) {
-		return fallback.replace(/\/$/, "");
-	}
+	return fallback.replace(/\/$/, "");
+}
 
-	if (hasBrowserOrigin) {
-		return sameOriginApiBase;
-	}
-
-	return "";
+export function resolveBackendOrigin(): string {
+	return resolveApiBaseUrl().replace(/\/api\/?$/, "");
 }
 

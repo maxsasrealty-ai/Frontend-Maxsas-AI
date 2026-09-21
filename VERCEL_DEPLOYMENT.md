@@ -84,5 +84,5 @@ Short answer: agar backend alag deploy hai, fix frontend deployment config me ho
 
 
 fronend / .env
-EXPO_PUBLIC_API_BASE_URL=http://134.209.157.41:4000/api
+EXPO_PUBLIC_API_BASE_URL=https://backend-maxsas-ai.onrender.com/api
 EXPO_PUBLIC_VOICE_API_BASE_URL=http://134.209.157.41:8080

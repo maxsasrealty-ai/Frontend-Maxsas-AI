@@ -35,20 +35,15 @@ describe("resolveApiBaseUrl", () => {
 		expect(resolveApiBaseUrl()).toBe("https://api.example.com/api");
 	});
 
-	it("falls back to same-origin api proxy when production env is insecure http", () => {
+	it("uses the configured production URL without rewriting its origin", () => {
 		Object.defineProperty(globalThis, "__DEV__", {
 			value: false,
 			configurable: true,
 			writable: true,
 		});
-		Object.defineProperty(globalThis, "window", {
-			value: { location: { origin: "https://maxsas.vercel.app/" } },
-			configurable: true,
-			writable: true,
-		});
 		process.env.EXPO_PUBLIC_API_BASE_URL = "http://134.209.157.41:4000/api";
 
-		expect(resolveApiBaseUrl()).toBe("https://maxsas.vercel.app/api");
+		expect(resolveApiBaseUrl()).toBe("http://134.209.157.41:4000/api");
 	});
 
 	it("falls back to localhost in development", () => {
@@ -61,18 +56,12 @@ describe("resolveApiBaseUrl", () => {
 		expect(resolveApiBaseUrl()).toBe("http://localhost:4000/api");
 	});
 
-	it("falls back to same-origin api proxy in production web when env is missing", () => {
+	it("falls back to the deployed backend in production when env is missing", () => {
 		Object.defineProperty(globalThis, "__DEV__", {
 			value: false,
 			configurable: true,
 			writable: true,
 		});
-		Object.defineProperty(globalThis, "window", {
-			value: { location: { origin: "https://maxsas.vercel.app/" } },
-			configurable: true,
-			writable: true,
-		});
-
-		expect(resolveApiBaseUrl()).toBe("https://maxsas.vercel.app/api");
+		expect(resolveApiBaseUrl()).toBe("https://backend-maxsas-ai.onrender.com/api");
 	});
 });

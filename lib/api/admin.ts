@@ -12,8 +12,7 @@ import { resolveApiBaseUrl } from "./base-url";
 import { apiClient } from "./client";
 
 
-// Always use dev-admin-key for local/dev; update for prod as needed
-const ADMIN_KEY = "dev-admin-key";
+const ADMIN_KEY = "";
 
 function adminHeaders(): HeadersInit {
   return {

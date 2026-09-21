@@ -2,10 +2,37 @@
   "version": 2,
   "buildCommand": "npm run web:build",
   "outputDirectory": "dist",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/:path*",
-      "destination": "http://134.209.157.41:4000/api/:path*"
+      "src": "^/admin/master-control/?$",
+      "dest": "https://backend-maxsas-ai.onrender.com/admin/master-control"
+    },
+    {
+      "src": "^/mc-assets/(.*)$",
+      "dest": "https://backend-maxsas-ai.onrender.com/mc-assets/$1"
+    },
+    {
+      "src": "^/globals\\.css$",
+      "dest": "https://backend-maxsas-ai.onrender.com/globals.css"
+    },
+    {
+      "src": "^/payments-panel/?$",
+      "dest": "https://backend-maxsas-ai.onrender.com/payments-panel"
+    },
+    {
+      "src": "^/api/admin/(.*)$",
+      "dest": "https://backend-maxsas-ai.onrender.com/api/admin/$1"
+    },
+    {
+      "src": "^/api/admin/?$",
+      "dest": "https://backend-maxsas-ai.onrender.com/api/admin"
+    },
+    {
+      "src": "^/api/calls/(.*)$",
+      "dest": "https://backend-maxsas-ai.onrender.com/api/calls/$1"
+    },
+    {
+      "handle": "filesystem"
     }
   ]
 }
