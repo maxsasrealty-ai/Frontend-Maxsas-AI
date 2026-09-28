@@ -5,31 +5,35 @@
   "routes": [
     {
       "src": "^/admin/master-control/?$",
-      "dest": "https://backend-maxsas-ai.onrender.com/admin/master-control"
+      "dest": "http://135.125.222.22:4000/admin/master-control"
     },
     {
       "src": "^/mc-assets/(.*)$",
-      "dest": "https://backend-maxsas-ai.onrender.com/mc-assets/$1"
+      "dest": "http://135.125.222.22:4000/mc-assets/$1"
     },
     {
       "src": "^/globals\\.css$",
-      "dest": "https://backend-maxsas-ai.onrender.com/globals.css"
+      "dest": "http://135.125.222.22:4000/globals.css"
     },
     {
       "src": "^/payments-panel/?$",
-      "dest": "https://backend-maxsas-ai.onrender.com/payments-panel"
+      "dest": "http://135.125.222.22:4000/payments-panel"
     },
     {
       "src": "^/api/admin/(.*)$",
-      "dest": "https://backend-maxsas-ai.onrender.com/api/admin/$1"
+      "dest": "http://135.125.222.22:4000/api/admin/$1"
     },
     {
       "src": "^/api/admin/?$",
-      "dest": "https://backend-maxsas-ai.onrender.com/api/admin"
+      "dest": "http://135.125.222.22:4000/api/admin"
     },
     {
       "src": "^/api/calls/(.*)$",
-      "dest": "https://backend-maxsas-ai.onrender.com/api/calls/$1"
+      "dest": "http://135.125.222.22:4000/api/calls/$1"
+    },
+    {
+      "src": "^/api/(.*)$",
+      "dest": "http://135.125.222.22:4000/api/$1"
     },
     {
       "handle": "filesystem"

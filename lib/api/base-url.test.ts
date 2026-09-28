@@ -41,9 +41,25 @@ describe("resolveApiBaseUrl", () => {
 			configurable: true,
 			writable: true,
 		});
-		process.env.EXPO_PUBLIC_API_BASE_URL = "http://134.209.157.41:4000/api";
+		process.env.EXPO_PUBLIC_API_BASE_URL = "http://135.125.222.22:4000/api";
 
-		expect(resolveApiBaseUrl()).toBe("http://134.209.157.41:4000/api");
+		expect(resolveApiBaseUrl()).toBe("http://135.125.222.22:4000/api");
+	});
+
+	it("uses the same-origin proxy for production web even when an API URL is configured", () => {
+		Object.defineProperty(globalThis, "__DEV__", {
+			value: false,
+			configurable: true,
+			writable: true,
+		});
+		Object.defineProperty(globalThis, "window", {
+			value: { location: { origin: "https://maxsasrealty.in" } },
+			configurable: true,
+			writable: true,
+		});
+		process.env.EXPO_PUBLIC_API_BASE_URL = "https://backend-maxsas-ai.onrender.com/api";
+
+		expect(resolveApiBaseUrl()).toBe("/api");
 	});
 
 	it("falls back to localhost in development", () => {
@@ -56,12 +72,17 @@ describe("resolveApiBaseUrl", () => {
 		expect(resolveApiBaseUrl()).toBe("http://localhost:4000/api");
 	});
 
-	it("falls back to the deployed backend in production when env is missing", () => {
+	it("uses the same-origin API proxy for production web when env is missing", () => {
 		Object.defineProperty(globalThis, "__DEV__", {
 			value: false,
 			configurable: true,
 			writable: true,
 		});
-		expect(resolveApiBaseUrl()).toBe("https://backend-maxsas-ai.onrender.com/api");
+		Object.defineProperty(globalThis, "window", {
+			value: { location: { origin: "https://maxsasrealty.in" } },
+			configurable: true,
+			writable: true,
+		});
+		expect(resolveApiBaseUrl()).toBe("/api");
 	});
 });
