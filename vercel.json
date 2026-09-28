@@ -4,6 +4,14 @@
   "outputDirectory": "dist",
   "routes": [
     {
+      "src": "^/master-control/?$",
+      "dest": "http://135.125.222.22:4000/admin/master-control"
+    },
+    {
+      "src": "^/master-control/(.*)$",
+      "dest": "http://135.125.222.22:4000/admin/master-control"
+    },
+    {
       "src": "^/admin/master-control/?$",
       "dest": "http://135.125.222.22:4000/admin/master-control"
     },
@@ -14,6 +22,10 @@
     {
       "src": "^/globals\\.css$",
       "dest": "http://135.125.222.22:4000/globals.css"
+    },
+    {
+      "src": "^/favicon(?:\\.ico|\\.svg)$",
+      "dest": "http://135.125.222.22:4000/favicon.svg"
     },
     {
       "src": "^/payments-panel/?$",
