@@ -3,7 +3,10 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator,
 import { router, useLocalSearchParams } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { resolveApiBaseUrl } from '../../lib/api/base-url';
-import { trackMetaInitiateCheckout } from '../../lib/marketing/metaPixel';
+import {
+  trackMetaInitiateCheckout,
+  trackMetaPurchase,
+} from '../../lib/marketing/metaPixel';
 
 type WebinarRegisterParams = {
   fullName?: string | string[];
@@ -199,6 +202,31 @@ export default function WebinarRegisterScreen() {
             });
 
             if (verifyRes.ok) {
+              let verifiedAmountPaise: unknown;
+              try {
+                const verificationData = await verifyRes.json();
+                verifiedAmountPaise = verificationData?.registration?.Webinar?.priceInPaise;
+              } catch {
+                verifiedAmountPaise = undefined;
+              }
+
+              const registrationId = typeof data.registrationId === 'string'
+                ? data.registrationId
+                : '';
+              const amountPaise = Number(verifiedAmountPaise ?? data.amount);
+
+              if (registrationId && Number.isFinite(amountPaise) && amountPaise >= 0) {
+                trackMetaPurchase(
+                  {
+                    value: amountPaise / 100,
+                    currency: 'INR',
+                    content_name: 'Maxsas AI Voice Agent Workshop Registration',
+                    content_type: 'product',
+                  },
+                  `webinar_${registrationId}`,
+                );
+              }
+
               // Redirect to Thank You Page
               router.replace('/webinar-thank-you');
             } else {

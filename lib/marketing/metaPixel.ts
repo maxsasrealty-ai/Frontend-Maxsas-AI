@@ -13,10 +13,12 @@ type MetaWindow = Window & {
 };
 
 const PIXEL_SCRIPT_ID = 'maxsas-meta-pixel';
+const PURCHASE_STORAGE_KEY = 'maxsas_meta_purchase_events';
 const pixelId = process.env.EXPO_PUBLIC_META_PIXEL_ID?.trim() || '';
 let initialized = false;
 const pageViews = new Set<string>();
 const viewContents = new Set<string>();
+const purchases = new Set<string>();
 
 declare const window: MetaWindow;
 
@@ -90,4 +92,52 @@ export function trackMetaInitiateCheckout(parameters: Record<string, unknown>): 
   if (!fbq) return;
 
   fbq('track', 'InitiateCheckout', parameters);
+}
+
+function hasRecordedPurchase(eventId: string): boolean {
+  if (purchases.has(eventId)) return true;
+
+  if (typeof window === 'undefined') return false;
+
+  try {
+    const recorded = JSON.parse(window.localStorage.getItem(PURCHASE_STORAGE_KEY) || '[]');
+    return Array.isArray(recorded) && recorded.includes(eventId);
+  } catch {
+    return false;
+  }
+}
+
+function recordPurchase(eventId: string): void {
+  purchases.add(eventId);
+
+  if (typeof window === 'undefined') return;
+
+  try {
+    const recorded = JSON.parse(window.localStorage.getItem(PURCHASE_STORAGE_KEY) || '[]');
+    const eventIds = Array.isArray(recorded)
+      ? recorded.filter((value): value is string => typeof value === 'string')
+      : [];
+
+    if (!eventIds.includes(eventId)) {
+      window.localStorage.setItem(
+        PURCHASE_STORAGE_KEY,
+        JSON.stringify([...eventIds, eventId].slice(-100)),
+      );
+    }
+  } catch {
+    // In-memory deduplication still protects repeated callbacks in this page.
+  }
+}
+
+export function trackMetaPurchase(
+  parameters: Record<string, unknown>,
+  eventId: string,
+): void {
+  if (!eventId || hasRecordedPurchase(eventId)) return;
+
+  const fbq = ensurePixel();
+  if (!fbq) return;
+
+  recordPurchase(eventId);
+  fbq('track', 'Purchase', parameters, { eventID: eventId });
 }
