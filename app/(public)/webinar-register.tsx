@@ -3,6 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, ActivityIndicator,
 import { router, useLocalSearchParams } from 'expo-router';
 import { Feather } from '@expo/vector-icons';
 import { resolveApiBaseUrl } from '../../lib/api/base-url';
+import { trackMetaInitiateCheckout } from '../../lib/marketing/metaPixel';
 
 type WebinarRegisterParams = {
   fullName?: string | string[];
@@ -165,6 +166,13 @@ export default function WebinarRegisterScreen() {
 
       // 2. Trigger Razorpay Checkout (Web/Native)
       if (typeof window !== 'undefined' && (window as any).Razorpay) {
+        trackMetaInitiateCheckout({
+          currency: data.currency,
+          value: Number(data.amount || 0) / 100,
+          content_name: 'Maxsas AI Voice Agent Workshop Registration',
+          content_type: 'product',
+        });
+
         const options = {
           key: data.key,
           amount: data.amount,

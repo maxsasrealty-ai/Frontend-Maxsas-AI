@@ -10,12 +10,13 @@ import {
     SpaceGrotesk_700Bold,
 } from '@expo-google-fonts/space-grotesk';
 import { useFonts } from 'expo-font';
-import { router, Stack, useSegments } from 'expo-router';
+import { router, Stack, usePathname, useSegments } from 'expo-router';
 import { useEffect, useRef, useState } from 'react';
 import { LogBox, Platform, StyleSheet, Text, View } from 'react-native';
 import SplashScreen from '../components/landing/SplashScreen';
 import { getAppVersionLabel } from '../lib/app-version';
 import { bootstrapAuthSession, subscribeAuthSession } from '../lib/auth/session';
+import { trackMetaPageView } from '../lib/marketing/metaPixel';
 import './global.css';
 
 LogBox.ignoreLogs([
@@ -27,6 +28,7 @@ LogBox.ignoreLogs([
 
 export default function RootLayout() {
   const segments = useSegments();
+  const pathname = usePathname();
   const [fontsLoaded] = useFonts({
     Inter_400Regular,
     Inter_500Medium,
@@ -83,6 +85,12 @@ export default function RootLayout() {
       router.replace('/(protected)/lexus');
     }
   }, [isAuthenticated, isReady, segments]);
+
+  useEffect(() => {
+    if (!isReady || Platform.OS !== 'web') return;
+
+    trackMetaPageView(pathname || '/');
+  }, [isReady, pathname]);
 
   const handleSplashFinish = () => {
     if (splashFinished.current) return;

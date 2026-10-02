@@ -24,8 +24,9 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { resolveApiBaseUrl } from '../../lib/api/base-url';
+import { trackMetaViewContent } from '../../lib/marketing/metaPixel';
 
-const LOGO_IMG = require('../../assets/images/maxsas-logo.png');
+const LOGO_IMG = '/maxsas-logo.png';
 const FOUNDER_IMG = '/anubhav.png';
 
 const c = {
@@ -364,6 +365,13 @@ export default function WebinarLandingScreen() {
       ? 'Seats Full'
       : 'Event Completed';
   const faqs = buildFaqs(webinarConfig.ticketPrice);
+
+  useEffect(() => {
+    trackMetaViewContent({
+      content_name: 'Maxsas AI Voice Agent Workshop',
+      content_type: 'product',
+    });
+  }, []);
 
   useEffect(() => {
     let active = true;
